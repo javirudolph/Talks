@@ -12,6 +12,7 @@ format:
     incremental: true
     transition: slide
     background-transition: fade
+    scrollable: true
 ---
 
 
@@ -101,14 +102,14 @@ We are just **organizing** your work:
 - Why build a package?
 - What problems does it solve?
 - How will it make life easier?
+- [My blog on building a simple R package](https://javirudolph.github.io/posts/2025-02-24-on-packages/)
+
 :::
 
-::: {.column width="50%"}
+::: {.column width="40%"}
 ![](images/r_pkgs_post_screenshot.png)
 :::
 ::::
-
-[My blog on package motivations](https://javirudolph.github.io/posts/2025-02-24-on-packages/)
 
 ## Why Build a Package?
 ### From the learners perspective 
