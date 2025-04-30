@@ -71,7 +71,8 @@ Ask audience to share their fears about package development
 > Remember how YOU felt when you first learned about R packages!
 :::
 
-## My experience 
+## My experience
+### Learning R over a decade ago with a pdf
 
 ![](images/stephens_intro2R.png)
 
