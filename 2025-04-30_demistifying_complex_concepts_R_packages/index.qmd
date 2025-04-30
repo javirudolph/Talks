@@ -1,0 +1,255 @@
+---
+title: "Demystifying complex technical concepts: R packages"
+subtitle: "Building confidence through simplified learning"
+author: "Javi Rudolph"
+date: "April 30, 2025"
+date-format: long
+format:
+  revealjs: 
+    slide-number: true
+    preview-links: auto
+    theme: [simple]
+    incremental: true
+    transition: slide
+    background-transition: fade
+---
+
+
+# Hello, I'm Javi! {background-color="#3D73B9" .white}
+
+:::: {.columns}
+::: {.column width="60%"}
+- Posit mentor since 2022
+- Disease ecologist 
+- Believer in simplifying the complex 
+- Organizing with packages since 2019
+:::
+
+::: {.column width="40%"}
+![](images/javirudolph_pic.jpg)
+:::
+::::
+
+## Why are we here today?
+
+::: {.blue-box}
+**Building confidence through demystification**
+:::
+
+- As mentors, our job is to make complex concepts **accessible**
+- Package development can seem like uncharted territory
+- But it doesn't have to be!
+
+::: {.notes}
+Share personal story about first encountering R packages and how intimidating they seemed
+:::
+
+## The 'Complex Thing': R Package Development {background-color="#F5F5F5"}
+
+### Why does it feel intimidating?
+
+- "It's only for R wizards and tidyverse experts"
+- "Steep learning curve. There's so much to learn at once"
+- "I don't have a computer science background – can I really do this?"
+
+::: {.notes}
+Ask audience to share their fears about package development
+:::
+
+## The Learner Experience
+
+::: {.pink-box}
+**A LOT of overwhelm**
+:::
+
+- "Where do I even start?"
+- "So many files and folders!"
+- "DESCRIPTION, NAMESPACE... what are these?"
+- "Documentation looks complicated"
+
+::: {.fragment}
+> Remember how YOU felt when you first learned about R packages!
+:::
+
+## My experience 
+
+![](images/stephens_intro2R.png)
+
+# My Approach to Teaching This {background-color="#3ECE8E" .white}
+
+## Reframing the Concept
+
+::: {.highlight-box}
+Forget about an "R package" - think of organization
+:::
+
+We are just **organizing** your work:
+
+1. Functions in logical files
+2. Documentation that's useful
+3. Making code reusable
+4. Sharing with others
+
+## Context Matters
+
+:::: {.columns}
+::: {.column width="50%"}
+### Start with "WHY"
+
+- Why build a package?
+- What problems does it solve?
+- How will it make life easier?
+:::
+
+::: {.column width="50%"}
+![](images/r_pkgs_post_screenshot.png)
+:::
+::::
+
+[My blog on package motivations](https://javirudolph.github.io/posts/2025-02-24-on-packages/)
+
+## Why Build a Package?
+### From the learners perspective 
+
+::: {.incremental}
+- **Share reusable work**
+  - Document utility functions
+  - Package widely used workflows
+  - Include example datasets with code
+- **Highlight sharing within teams!**
+:::
+
+::: {.notes}
+Emphasize that packages are about organization and sharing, not complexity
+:::
+
+## Present a Small Win
+
+::: {.green-box}
+**Turn ONE function into a package**
+:::
+
+- Following first chapter in [R Packages book](https://r-pkgs.org/whole-game.html)
+- Creates immediate sense of accomplishment
+- Shows the core workflow in microcosm
+
+## Demo Time! {.smaller}
+
+::: {.blue-box}
+**Live code in ~25 minutes**
+:::
+
+1. Create package structure with `usethis::create_package()`
+2. Add a simple function from milestone (using `ifelse` not `if_else`)
+3. Document with roxygen comments
+4. Build and check
+5. Install and use!
+
+::: {.fragment}
+**Keep it casual & relaxed**
+- Show your mistakes and fixes
+- Demonstrate the iterative cycle
+:::
+
+
+## The Development Cycle
+
+:::: {.columns}
+::: {.column width="45%"}
+1. Write/edit function
+2. Document (`Ctrl+Shift+D`)
+3. Load (`Ctrl+Shift+L`)
+4. Test in console
+5. Repeat!
+:::
+
+::: {.column width="55%"}
+<!-- ![](https://r-pkgs.org/diagrams/loading.png) -->
+:::
+::::
+
+::: {.notes}
+<!-- Image source: R Packages book by Hadley Wickham and Jenny Bryan -->
+:::
+
+## What I *Don't* Include (Yet)
+
+::: {.pink-box}
+**Keeping it simple is key!**
+:::
+
+- Git/GitHub integration
+  - Can be taught separately
+- Unit testing
+  - Introduce after basics are solid
+- Complex dependencies
+  - Start with base R functions
+
+# The Mentoring Mindset {background-color="#FF7C7C" .white}
+
+## Co-exploration, Not Expertise Delivery
+
+> "I'm not here to have all the answers. I'm here to figure things out alongside you."
+
+- Create space for joint problem-solving
+   -  "I *forgot* the order of `document()` and `load()`"
+- Model how to approach unknown territory
+   - Learning to read the outputs of `usethis`
+- Build confidence through collaboration
+   - "Can someone *tell* me what our first function was?"
+
+
+## Celebrate Mini-Milestones!
+
+:::: {.columns}
+::: {.column width="50%"}
+- First working function
+- First successful documentation
+- First package install
+- First time using your own package
+:::
+
+::: {.column width="50%"}
+![](https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif)
+:::
+::::
+
+## Success Story
+
+::: {.blue-box}
+Manager who shared scripts but never built packages
+:::
+
+- Initially intimidated by package development
+- Attended a collaborative session like this
+- Built a package for team utility functions
+- Later hosted it on organizational GitHub
+- Inspired others on the team!
+
+[Visit their blog](https://mostlyunoriginal.github.io/)
+
+## Lessons Learned
+
+::: {.incremental}
+- Version control + packages = too much at once
+- Seeing a package built live is powerful
+- Understanding packages ≠ having to build them
+- Exploring others' packages builds confidence
+   - Navigating GitHub packages
+:::
+
+# Discussion Time {background-color="#3D73B9" .white}
+
+## Discussion Questions
+### Posted on retrotool
+
+1. How do you recognize and defuse fear in your learners?
+
+2. What's one topic you've hesitated to teach because it felt too complex?
+
+3. What techniques do you use to simplify difficult material?
+
+4. How could you take a complex topic and make it teachable?
+
+## Thank You! {background-color="#3ECE8E" .white}
+
