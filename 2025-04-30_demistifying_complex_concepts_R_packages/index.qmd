@@ -22,7 +22,7 @@ format:
 - Posit mentor since 2022
 - Disease ecologist 
 - Believer in simplifying the complex 
-- Organizing with packages since 2019
+- Organizing *stuff* with packages [since 2019](https://javirudolph.github.io/short-tutorials/packages/apr29presentation.html#1)
 :::
 
 ::: {.column width="40%"}
@@ -50,6 +50,7 @@ Share personal story about first encountering R packages and how intimidating th
 
 - "It's only for R wizards and tidyverse experts"
 - "Steep learning curve. There's so much to learn at once"
+   - [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-devel/R-exts.html)
 - "I don't have a computer science background – can I really do this?"
 
 ::: {.notes}
