@@ -8,7 +8,7 @@ format:
   revealjs: 
     slide-number: true
     preview-links: auto
-    theme: [simple]
+    theme: [simple, custom.scss]
     incremental: true
     transition: slide
     background-transition: fade
