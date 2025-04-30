@@ -194,11 +194,10 @@ Emphasize that packages are about organization and sharing, not complexity
 
 - Create space for joint problem-solving
    -  "I *forgot* the order of `document()` and `load()`"
-- Model how to approach unknown territory
-   - Learning to read the outputs of `usethis`
+- Normalizing not knowing everything
+   - Understanding outputs of `usethis` and errors
 - Build confidence through collaboration
    - "Can someone *tell* me what our first function was?"
-
 
 ## Celebrate Mini-Milestones!
 
