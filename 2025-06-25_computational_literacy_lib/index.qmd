@@ -1,5 +1,5 @@
 ---
-title: "Growing Computational Literacy as a Community of Practice"
+title: "Growing computational literacy as a community of practice"
 subtitle: "Creating sustainable support through peer-driven communities"
 author: "Francisca Javiera Rudolph, PhD"
 date: "June 25, 2025"
