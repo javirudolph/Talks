@@ -1,0 +1,139 @@
+---
+title: "Growing Computational Literacy as a Community of Practice"
+subtitle: "Creating sustainable support through peer-driven communities"
+author: "Francisca Javiera Rudolph, PhD"
+date: "June 25, 2025"
+date-format: long
+format:
+  revealjs: 
+    slide-number: true
+    preview-links: auto
+    theme: [simple, custom.scss]
+    incremental: true
+    transition: slide
+    background-transition: fade
+    scrollable: true
+    width: 1600
+    height: 900
+from: markdown+emoji
+---
+
+# :wave: Hello, I'm Javi! {background-color="white" style="color: #4A6FA5;"}
+
+:::: {.columns}
+::: {.column width="60%"}
+- Disease ecologist & data scientist
+- R mentor & package developer since 2018 - python recently
+- Passionate about **peer learning** & **open science**
+- Focused on building community, not just curriculum
+:::
+
+<!-- ::: {.column width="30%"} -->
+<!-- ![](images/javirudolph_pic.jpg) -->
+<!-- ::: -->
+::::
+
+#  What do we mean by computational literacy?
+
+::: {.fragment}
+> "Information literacy is the set of integrated abilities encompassing the reflective discovery of information, the understanding of how information is produced and valued, and the use of information in creating new knowledge and participating ethically in communities of learning." 
+
+::: {.citation}
+— Association of College & Research Libraries  
+[Framework for Information Literacy for Higher Education](https://www.ala.org/acrl/standards/ilframework)
+:::
+:::
+
+- Not just coding. Not just tools. Not just stats.
+- Key goals:
+  - Empower researchers to use data/AI tools responsibly (how, when, which)
+  - **Build habits** around reproducibility and ethics
+  - Increase access, participation, and *confidence*
+
+
+# How do we grow a computational literacy program? 
+
+- Start with what’s already working — connect and amplify it
+- Create low-barrier, high-impact entry points
+- Center peer learning as both a method and a value
+
+# My approach: focus on community building {background-color="#6B9B6E" .white}
+
+# Why does this work?
+
+- **Communities provide ongoing support beyond workshops**
+  - Real-time help when people get stuck
+  - Motivation and accountability
+
+- **Communities create sustainable knowledge transfer**
+  - Knowledge doesn't leave when one person graduates or changes jobs
+  - Multiple champions across departments
+
+- **Adoption happens through social networks, not just curriculum**
+  - People try new tools because their trusted colleagues recommend them
+  - Cultural change spreads through relationships
+
+# Strategic actions {background-color="#6B9B6E" .white}
+
+# Strategy: **Map** what already exists
+
+- Create a landing page with a roadmap
+   - Simple, not overwhelming
+   - Identify and focus on common actions
+      - Starting a *reproducible* project
+      - Finding available workshops
+      - Compiling available certificates
+      - *ALL* the links
+
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnViamt3dnczZW00Nmp6dGc0amIzMGJ5dXNzeWRrZnU0aGZhendraiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/cjbfyJrICOaKIXBWyG/giphy.gif)
+
+
+# Strategy: Empower peer-to-peer mentoring and learning
+
+::: {.green-box}
+Build community capacity, not dependence on experts
+:::
+
+- **Learning circles** & **Book clubs**
+- **Digital badges**
+- **Templates & starter kits**
+- **Recognition systems**
+
+# Strategy: Maintaining an open newsletter {background-color="#D4885A" .white}
+
+- Community is built by people, but people rotate out: students graduate, postdocs move, roles change.
+- We still need continuity, visibility, and shared direction.
+- Offers predictability: a consistent rhythm that members can rely on for resources, updates, and opportunities
+- Models openness and reproducibility in practice
+
+# Some lessons learned
+
+::: {.notes}
+When we ran RLadies locally, we saw how powerful peer communities could be. But we also saw how fragile they are when held up by passion alone. Burnout doesn’t mean failure, it means the structure didn’t honor the labor. At UF, I want to build models where this kind of work is visible, supported, and sustained.
+:::
+
+::: {.large}
+- Peer-driven communities work: people teach each other, lift each other up, and create lasting impact.
+
+- But when the labor is invisible, unpaid, and unsupported, even the strongest community struggles.
+
+- Passion can ignite a community, but predictability, recognition, and infrastructure keep it alive.
+:::
+
+
+## 🤖 Practicing What I Preach
+
+This presentation, my prep, and my website are: 
+
+- Built with **Quarto**, **R**, **AI**, and **open source tools**
+- Documented in a [blog post](https://javirudolph.github.io/posts/2025-06-19-computational-literacy/)
+- Meant to model **transparency**, and provide resources to build upon
+
+
+# Thank You!{background-color="white" .white}
+
+**Let’s build this together.**
+
+::: {style="text-align: center;"}
+![](images/wordcloud.png){width="90%"}
+:::

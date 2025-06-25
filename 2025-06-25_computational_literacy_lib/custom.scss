@@ -1,0 +1,68 @@
+/*-- scss:defaults --*/
+$primary: #4A6FA5;
+$secondary: #6B9B6E;
+$tertiary: #D4885A;
+$light: #F8F6F0;
+$dark: #2C3E50;
+$body-bg: $light;
+$body-color: $dark;
+$heading-color: $primary;
+$link-color: $secondary;
+
+/*-- scss:rules --*/
+.reveal .slide blockquote {
+  border-left: 4px solid $secondary;
+  padding-left: 1em;
+  color: darken($primary, 15%);
+}
+
+.reveal .slide code {
+  color: $tertiary;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.subtitle {
+  color: $secondary;
+}
+
+.blue-box {
+  background-color: lighten($primary, 40%);
+  border-left: 5px solid $primary;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+}
+
+.green-box {
+  background-color: lighten($secondary, 40%);
+  border-left: 5px solid $secondary;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+}
+
+.pink-box {
+  background-color: lighten($tertiary, 15%);
+  border-left: 5px solid $tertiary;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+}
+
+.smaller {
+  font-size: 0.8em;
+}
+
+.highlight-text {
+  color: $primary;
+  font-weight: bold;
+}
+
+.highlight-box {
+  color: white;
+  background-color: $primary;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.large-image {
+  width: 100% !important;
+  max-width: 800px !important;
+}
