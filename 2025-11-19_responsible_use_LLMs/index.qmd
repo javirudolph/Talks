@@ -377,10 +377,10 @@ summary(model)
 ::: {.callout-tip icon="false"}
 ## UF's LLM Access Point
 
-**Navigator** is UF's interface to access multiple LLMs (ChatGPT, Claude, etc.)
+**Navigator Chat** is UF's interface to access multiple LLMs (ChatGPT, Claude, etc.)
 
 -   Accessible to all UF students, faculty, and staff
--   Access at: [navigator.it.ufl.edu](https://navigator.it.ufl.edu)
+-   Access at: [https://it.ufl.edu/ai/navigator-chat/](https://ai.ufl.edu/teaching-with-ai/for-uf-faculty/navigator/)
 -   Provides a safer environment than public ChatGPT
 -   **But still:** Don't share sensitive or private data
 :::
