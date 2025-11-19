@@ -82,7 +82,7 @@ Large Language Models (like ChatGPT, Claude, etc.) are becoming ubiquitous in re
 :::
 
 :::: fragment
-Part of computational literacy in 2024 means:
+Part of computational literacy in 2025 means:
 
 ::: incremental
 -   Understanding what LLMs are and aren't
