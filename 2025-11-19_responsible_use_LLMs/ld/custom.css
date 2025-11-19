@@ -1,0 +1,231 @@
+/*-- scss:defaults --*/
+
+/* Color palette */
+$ufl-orange: #FA4616;
+$ufl-blue: #0021A5;
+$highlight-yellow: #FFF4CC;
+$highlight-green: #D4EDDA;
+$highlight-red: #F8D7DA;
+$highlight-blue: #D1ECF1;
+$highlight-orange: #FFE5CC;
+
+/*-- scss:rules --*/
+
+/* Main title slide */
+.reveal .slide.title-slide {
+  text-align: left;
+}
+
+.reveal .slide.title-slide h1 {
+  font-size: 2.5em;
+  color: $ufl-blue;
+  margin-bottom: 0.3em;
+}
+
+.reveal .slide.title-slide h2 {
+  font-size: 1.3em;
+  color: $ufl-orange;
+  margin-bottom: 0.5em;
+}
+
+/* Slide titles */
+.reveal h2 {
+  color: $ufl-blue;
+  margin-bottom: 0.8em;
+}
+
+.reveal h3 {
+  color: $ufl-orange;
+  margin-top: 0.6em;
+  margin-bottom: 0.4em;
+}
+
+/* Highlighted text classes */
+.highlight-blue {
+  background-color: $highlight-blue;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border-left: 4px solid $ufl-blue;
+  margin: 0.5em 0;
+}
+
+.highlight-orange {
+  background-color: $highlight-orange;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border-left: 4px solid $ufl-orange;
+  margin: 0.5em 0;
+}
+
+.highlight-green {
+  background-color: $highlight-green;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border-left: 4px solid #28A745;
+  margin: 0.5em 0;
+}
+
+.highlight-red {
+  background-color: $highlight-red;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border-left: 4px solid #DC3545;
+  margin: 0.5em 0;
+}
+
+/* Callout boxes styling */
+.callout {
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 8px;
+}
+
+.callout-note {
+  background-color: $highlight-blue;
+  border-left: 5px solid $ufl-blue;
+}
+
+.callout-warning {
+  background-color: #FFF3CD;
+  border-left: 5px solid #FFC107;
+}
+
+.callout-important {
+  background-color: $highlight-red;
+  border-left: 5px solid #DC3545;
+}
+
+.callout-tip {
+  background-color: $highlight-green;
+  border-left: 5px solid #28A745;
+}
+
+/* Code blocks */
+.reveal pre {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 0.5em 0;
+}
+
+.reveal code {
+  background-color: #F8F9FA;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* Lists */
+.reveal ul, .reveal ol {
+  margin-left: 1em;
+}
+
+.reveal ul li, .reveal ol li {
+  margin-bottom: 0.5em;
+}
+
+/* Incremental lists with nice spacing */
+.reveal .incremental > * {
+  margin-bottom: 0.3em;
+}
+
+/* Center aligned slides */
+.center {
+  text-align: center;
+}
+
+.center h2, .center h3 {
+  text-align: center;
+}
+
+/* Columns layout improvements */
+.reveal .columns {
+  display: flex;
+  gap: 2em;
+}
+
+/* Fragment highlighting */
+.reveal .fragment.highlight-current-blue.current-fragment {
+  background-color: $highlight-blue;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+/* Footer styling */
+.reveal .footer {
+  color: #666;
+  font-size: 0.7em;
+}
+
+/* Smaller text class */
+.smaller {
+  font-size: 0.85em;
+}
+
+.smaller li {
+  margin-bottom: 0.3em;
+}
+
+/* Emoji sizing */
+.reveal h2 img.emoji, .reveal h3 img.emoji {
+  height: 1em;
+  vertical-align: middle;
+  margin: 0 0.1em;
+}
+
+/* Table styling */
+.reveal table {
+  border-collapse: collapse;
+  margin: 1em auto;
+}
+
+.reveal table th {
+  background-color: $ufl-blue;
+  color: white;
+  padding: 0.5em;
+}
+
+.reveal table td {
+  padding: 0.5em;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Strong emphasis */
+.reveal strong {
+  color: $ufl-orange;
+  font-weight: bold;
+}
+
+/* Links */
+.reveal a {
+  color: $ufl-blue;
+  text-decoration: none;
+}
+
+.reveal a:hover {
+  color: $ufl-orange;
+  text-decoration: underline;
+}
+
+/* Blockquotes */
+.reveal blockquote {
+  background-color: #F8F9FA;
+  border-left: 5px solid $ufl-blue;
+  padding: 1em;
+  margin: 1em 0;
+  font-style: italic;
+}
+
+/* Slide backgrounds */
+.reveal .slide-background {
+  background-color: #FFFFFF;
+}
+
+/* Section divider slides */
+.reveal .slide.section {
+  background-color: $ufl-blue;
+  color: white;
+}
+
+.reveal .slide.section h2 {
+  color: white;
+}
