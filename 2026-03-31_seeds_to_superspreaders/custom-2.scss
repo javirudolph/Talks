@@ -1,0 +1,428 @@
+/*
+ * custom.scss
+ * Quarto RevealJS theme for:
+ * "From Seed Dispersal to Superspreaders"
+ * Francisca Javiera Rudolph, PhD
+ *
+ * Colors extracted from rudolph_epi_behavior_symp.pptx
+ * Fonts: Aptos Display (headers), Aptos (body)
+ */
+
+/*-- scss:defaults --*/
+
+// ============================================================
+// VARIABLES
+// ============================================================
+
+$navy:       #0E2841;
+$forest:     #196B24;
+$teal:       #156082;
+$orange:     #E97132;
+$lightgrey:  #E8E8E8;
+$purple:     #A02B93;
+$skyblue:    #0F9ED5;
+$midgrey:    #555555;
+$offwhite:   #F7F7F7;
+$white:      #FFFFFF;
+
+// ============================================================
+// FONT IMPORTS — Aptos via Google Fonts fallback
+// (Aptos is a Microsoft font; fallback to Inter which is similar)
+// ============================================================
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Inter+Display:wght@700;800&display=swap');
+
+/*-- scss:rules --*/
+
+// ============================================================
+// BASE REVEAL OVERRIDES
+// ============================================================
+
+.reveal {
+  font-family: 'Inter', 'Aptos', 'Segoe UI', sans-serif;
+  font-size: 22px;
+  color: #1a1a2e;
+  background-color: $white;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: 'Inter Display', 'Aptos Display', 'Segoe UI', sans-serif;
+  font-weight: 700;
+  color: $navy;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin-bottom: 0.5em;
+}
+
+.reveal h2 {
+  font-size: 1.6em;
+  border-left: 5px solid $teal;
+  padding-left: 0.4em;
+}
+
+.reveal h3 {
+  font-size: 1.1em;
+  color: $teal;
+  font-weight: 600;
+  margin-top: 0.6em;
+  margin-bottom: 0.3em;
+}
+
+.reveal p {
+  line-height: 1.55;
+  margin-bottom: 0.5em;
+}
+
+.reveal ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.reveal ul li {
+  padding-left: 1.2em;
+  position: relative;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+.reveal ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: $teal;
+  font-weight: 600;
+}
+
+.reveal strong {
+  color: $navy;
+  font-weight: 700;
+}
+
+.reveal em {
+  color: $midgrey;
+  font-style: italic;
+}
+
+// ============================================================
+// TITLE SLIDE
+// ============================================================
+
+.reveal .title-slide {
+  background-color: $navy !important;
+  color: $white !important;
+}
+
+.title-block {
+  margin-top: 2em;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: $lightgrey;
+}
+
+.title-block strong {
+  color: $white !important;
+  font-size: 1.3em;
+  display: block;
+  margin-bottom: 0.3em;
+}
+
+.title-image {
+  margin-top: 1.5em;
+  text-align: center;
+  opacity: 0.85;
+}
+
+// ============================================================
+// WHITE TEXT MODIFIER (for dark slides)
+// ============================================================
+
+.white-text h2,
+.white-text h3,
+.white-text p,
+.white-text li,
+.white-text strong {
+  color: $white !important;
+}
+
+.white-text h2 {
+  border-left-color: $skyblue !important;
+}
+
+.white-text h3 {
+  color: $skyblue !important;
+}
+
+.white-text ul li::before {
+  color: $skyblue;
+}
+
+// ============================================================
+// PLACEHOLDER BOXES
+// ============================================================
+
+.placeholder-box {
+  background-color: $lightgrey;
+  border: 2px dashed #aaaaaa;
+  border-radius: 6px;
+  padding: 1.5em 1em;
+  text-align: center;
+  color: $midgrey;
+  font-size: 0.85em;
+  font-style: italic;
+  margin-bottom: 0.8em;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-box-tall {
+  @extend .placeholder-box;
+  min-height: 320px;
+}
+
+.placeholder-box-dark {
+  background-color: rgba(255,255,255,0.1);
+  border: 2px dashed rgba(255,255,255,0.4);
+  border-radius: 6px;
+  padding: 1.5em 1em;
+  text-align: center;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.85em;
+  font-style: italic;
+  margin-bottom: 0.8em;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// ============================================================
+// CITATION & QUOTE BLOCKS
+// ============================================================
+
+.citation {
+  font-size: 0.72em;
+  color: $midgrey;
+  font-style: italic;
+  margin-top: 1em;
+  padding-top: 0.5em;
+  border-top: 1px solid $lightgrey;
+}
+
+.citation-light {
+  font-size: 0.72em;
+  color: rgba(255,255,255,0.6);
+  font-style: italic;
+  margin-top: 1em;
+  padding-top: 0.5em;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.quote-block {
+  background-color: $offwhite;
+  border-left: 4px solid $orange;
+  padding: 0.8em 1em;
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
+  color: $navy;
+  font-size: 0.9em;
+  margin-top: 0.8em;
+}
+
+// ============================================================
+// STAT CALLOUT
+// ============================================================
+
+.stat-callout {
+  background-color: $navy;
+  color: $white;
+  border-radius: 8px;
+  padding: 0.8em 1em;
+  font-size: 0.88em;
+  line-height: 1.5;
+  margin-top: 0.8em;
+}
+
+.stat-callout strong {
+  color: $skyblue !important;
+}
+
+// ============================================================
+// KEY INSIGHT / FINDINGS BLOCKS
+// ============================================================
+
+.key-insight {
+  background-color: rgba($teal, 0.08);
+  border-left: 4px solid $teal;
+  padding: 0.8em 1em;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9em;
+  margin-top: 1em;
+  color: $navy;
+}
+
+.key-insight strong {
+  color: $teal !important;
+}
+
+.findings-block {
+  background-color: $offwhite;
+  border-radius: 8px;
+  padding: 1em 1.2em;
+  font-size: 0.88em;
+  line-height: 1.7;
+  margin: 0.8em 0;
+}
+
+.findings-block strong {
+  color: $teal !important;
+  display: block;
+  margin-top: 0.5em;
+}
+
+// ============================================================
+// CASCADE / ARROW BLOCKS (for disease mechanism slide)
+// ============================================================
+
+.cascade-block {
+  background-color: rgba($skyblue, 0.1);
+  border: 1px solid rgba($skyblue, 0.3);
+  border-radius: 8px;
+  padding: 1em 1.2em;
+  font-size: 0.92em;
+  line-height: 1.9;
+  text-align: center;
+  color: $white;
+}
+
+.cascade-block strong {
+  color: $skyblue !important;
+  font-size: 1.05em;
+}
+
+.arrow-callout {
+  background-color: rgba($orange, 0.15);
+  border: 1px solid rgba($orange, 0.5);
+  border-radius: 8px;
+  padding: 0.8em 1em;
+  font-size: 0.88em;
+  line-height: 1.7;
+  text-align: center;
+  color: $white;
+  margin-top: 0.8em;
+}
+
+.arrow-callout strong {
+  color: $orange !important;
+}
+
+// ============================================================
+// QUESTION BLOCK
+// ============================================================
+
+.question-block {
+  background-color: rgba($forest, 0.08);
+  border-left: 4px solid $forest;
+  border-radius: 0 6px 6px 0;
+  padding: 0.9em 1em;
+  font-size: 0.88em;
+  line-height: 1.6;
+  margin-top: 1em;
+  color: $navy;
+}
+
+.question-block em {
+  font-style: italic;
+  color: $forest;
+}
+
+// ============================================================
+// ξ TABLE (EVT shape parameter)
+// ============================================================
+
+.xi-table table {
+  width: 100%;
+  font-size: 0.85em;
+  border-collapse: collapse;
+  margin-top: 0.5em;
+}
+
+.xi-table td {
+  padding: 0.4em 0.6em;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  color: $white;
+}
+
+.xi-table tr:last-child td {
+  color: $orange;
+  font-weight: 700;
+}
+
+// ============================================================
+// TIMELINE BAR (for EVT slide)
+// ============================================================
+
+.timeline-bar {
+  position: absolute;
+  bottom: 0.5em;
+  left: 0;
+  right: 0;
+  background-color: rgba($teal, 0.15);
+  border-top: 2px solid $teal;
+  padding: 0.4em 1.5em;
+  font-size: 0.7em;
+  color: $lightgrey;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+// ============================================================
+// FOOTER & SLIDE NUMBER
+// ============================================================
+
+.reveal .footer {
+  font-size: 0.65em;
+  color: $midgrey;
+}
+
+.reveal .slide-number {
+  font-size: 0.65em;
+  color: $midgrey;
+  background: transparent;
+}
+
+// ============================================================
+// COLUMNS
+// ============================================================
+
+.reveal .columns {
+  display: flex;
+  gap: 1.5em;
+  align-items: flex-start;
+}
+
+// ============================================================
+// TRANSITIONS & MISC
+// ============================================================
+
+.reveal .slide-background {
+  background-color: $white;
+}
+
+.reveal section img {
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  max-width: 100%;
+}
+
+.reveal code {
+  font-family: 'Consolas', 'Monaco', monospace;
+  background-color: $lightgrey;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  font-size: 0.88em;
+}
