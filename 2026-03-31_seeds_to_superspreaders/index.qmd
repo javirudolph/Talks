@@ -36,8 +36,8 @@ execute:
 :::: {.columns}
 
 ::: {.column width="50%"}
-- Bolnick and colleagues looked across 93 species and found that **individual specialization is widespread across taxa**
-- The population niche is broad not because every individual is a generalist, but because **different individuals are doing different things**
+- Bolnick and colleagues looked across 93 species and found that **individual specialization is widespread across taxa** - different individuals are doing different things
+- Focusing on variation among individuals, not species averages, reveals the mechanisms behind seed dispersal outcomes.
 
 ![](images/bolnick_2003.jpg){width=60%}
 
@@ -68,63 +68,35 @@ Concave relationship: a population with variation disperses fewer seeds than pre
 
 ---
 
-## Individual Variation in Movement is Not Noise {background-color="#ffffff"}
+## The Origin: Aracari & Seed Dispersal {background-color="#ffffff"}
 
 :::: {.columns}
+
+::: {.column width="55%"}
+- Primary dispersers of *Virola* trees in Ecuadorian rainforest
+- Most seeds land close to parent — but **rare long-distance events are not that rare** when we account for individual variation in movement
+- Establishing the link with movement and LDD
+
+
+![](images/holbrook_cropped.png)
+
+::: {.citation}
+Holbrook 2011 *Biotropica*
+:::
+:::
 
 ::: {.column width="45%"}
-- **35 African elephants tracked** — each individual moves differently, consistently
-- Elephants differ not just in *how far* they move, but in **how predictably** they move
-- Faster-moving elephants have shorter residence times — a behavioral syndrome emerging from individual variation
-- Individual movement differences have real consequences: **they predict vulnerability to poaching**
 
-::: {.citation}
-Hertel et al. *Movement Ecology* 2020
-:::
-:::
+![Many-banded Aracari photo (*Pteroglossus pluricinctus*) © Diego Mosquera](images/ptpl1.png)
 
-::: {.column width="50%"}
-::: {.placeholder-box}
-[PLACEHOLDER: Hertel Figure — elephant individual movement tracks or behavioral syndrome plot]
-:::
-:::
-
-::::
-
-
----
-
-## The Shape of the Kernel Matters More Than the Mean {background-color="#ffffff"}
-
-:::: {.columns}
-
-::: {.column width="50%"}
-- Same mean dispersal distance, **three different kernel shapes** — completely different population dynamics
-- Fat-tailed kernels produce ever-accelerating spread — **the tail drives the process, not the mean**
-- Individual variation in movement generates leptokurtic kernels at the population level
-
-::: {.citation}
-Snell et al. *AoB PLANTS* 2019
-:::
-:::
-
-::: {.column width="50%"}
-::: {.placeholder-box}
-[PLACEHOLDER: Snell Box 4 — Gaussian / Laplacian / Log square root kernels and spatial spread panels]
-:::
 :::
 
 ::::
 
 ::: {.notes}
-All three kernels have the same mean. But only one of them captures what actually happens when a few individuals move very far. And that's the one that matches reality.
+My dissertation. These birds are the primary dispersal vector for tropical trees. The biological question: where do seeds go? The statistical question: how do you characterize a rare long-distance event that you may have only seen once or twice?
 :::
 
----
-
-::: {.r-stretch}
-![](images/origin_story.png)
-:::
 
 ---
 
@@ -142,38 +114,6 @@ All three kernels have the same mean. But only one of them captures what actuall
 
 ::: {.r-stretch}
 ![](images/extended_kernels.png)
-:::
-
----
-
-## The Origin Story: Aracari & Seed Dispersal {background-color="#ffffff"}
-
-:::: {.columns}
-
-::: {.column width="55%"}
-- Primary dispersers of *Virola* trees in Ecuadorian rainforest
-- Most seeds land close to parent — but **rare long-distance events are not that rare** when we account for individual variation in movement
-- Radio telemetry: each bird a different movement distribution
-- The statistical question: how do you characterize a rare long-distance event you may have seen only once?
-
-::: {.citation}
-Holbrook 2011 *Biotropica* · Rudolph 2022 *Zenodo*
-:::
-:::
-
-::: {.column width="45%"}
-::: {.placeholder-box}
-[PLACEHOLDER: Many-banded Aracari photo (*Pteroglossus pluricinctus*) © Murray Cooper]
-:::
-::: {.quote-block}
-*"Individual variation in movement isn't noise. It's the signal."*
-:::
-:::
-
-::::
-
-::: {.notes}
-My dissertation. These birds are the primary dispersal vector for tropical trees. The biological question: where do seeds go? The statistical question: how do you characterize a rare long-distance event that you may have only seen once or twice?
 :::
 
 ---
