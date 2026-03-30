@@ -7,6 +7,7 @@ date: "March 2026"
 format:
   revealjs:
     theme: [default, custom_v2.scss]
+    scrollable: true
     slide-number: true
     show-slide-number: speaker
     transition: fade
@@ -33,35 +34,33 @@ execute:
 
 :::: {.columns}
 
-::: {.column width="55%"}
-- **Individual specialization is widespread across taxa** — the rule, not the exception
+::: {.column width="50%"}
+- Bolnick and colleagues looked across 93 species and found that **individual specialization is widespread across taxa**
 - The population niche is broad not because every individual is a generalist, but because **different individuals are doing different things**
-- The population niche obscures individual variation — **same mean, different biology/behavior**
 
-::: {.citation}
-Bolnick et al. *The American Naturalist* 2003 · Zwolak *Biol Rev* 2018
-:::
-:::
+![](images/bolnick_2003.jpg){width=60%}
 
-::: {.column width="45%"}
-::: {.r-stretch}
-![](images/bolnick_2003.jpg)
-:::
 ::: {.citation}
 Bolnick et al. *The American Naturalist* 2003
+:::
+
+:::
+
+::: {.column width="50%"}
+
+![](images/Zwolak_2018.jpg){height="50%"} 
+
+::: {.citation}
+Zwolak. *Biological Reviews* 2018
 :::
 :::
 
 ::::
 
 ::: {.notes}
-Bolnick and colleagues looked across 93 species and found that individual specialization is widespread across taxa.
-The population niche is broad not because every individual is a generalist, but because different individuals are doing different things.
-
 Individual variation in seed dispersers (personality, age, sex, specialization) shapes where seeds go and whether they survive.
 The link between individual variation and seed fate runs almost entirely through movement ecology.
 Focusing on variation among individuals, not species averages, reveals the mechanisms behind seed dispersal outcomes.
-
 Convex relationship: a population with variation disperses more seeds than predicted from the mean.
 Concave relationship: a population with variation disperses fewer seeds than predicted from the mean.
 :::
@@ -72,7 +71,7 @@ Concave relationship: a population with variation disperses fewer seeds than pre
 
 :::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="45%"}
 - **35 African elephants tracked** — each individual moves differently, consistently
 - Elephants differ not just in *how far* they move, but in **how predictably** they move
 - Faster-moving elephants have shorter residence times — a behavioral syndrome emerging from individual variation
