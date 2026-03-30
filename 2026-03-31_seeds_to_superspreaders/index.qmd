@@ -6,14 +6,13 @@ institute: "University of Florida Libraries | One Health Center of Excellence"
 date: "March 2026"
 format:
   revealjs:
-    theme: [default, custom-2.scss]
+    theme: [default, custom_v2.scss]
     slide-number: true
     show-slide-number: speaker
     transition: fade
     transition-speed: fast
     background-transition: fade
     footer: "Animal Behavior & Infectious Disease Symposium | March 2026"
-    logo: ""
     fig-align: center
     width: 1400
     height: 788
@@ -22,31 +21,13 @@ format:
     highlight-style: github
     chalkboard: false
     multiplex: false
+    title-slide-attributes:
+      data-background-color: "#196B24"
 execute:
   echo: false
   warning: false
 ---
 
-## From Seed Dispersal to Superspreaders {.title-slide background-color="#0E2841"}
-
-::: {.title-block}
-**Extreme Value Theory as a Mechanistic Framework**  
-**for Pathogen Dispersal in Wildlife Systems**
-
-Francisca Javiera Rudolph, PhD  
-University of Florida Libraries | One Health Center of Excellence  
-Animal Behavior & Infectious Disease Symposium | March 2026
-:::
-
-::: {.title-image}
-<!-- [PLACEHOLDER: Title image — aracari or forest/pathogen graphic] -->
-:::
-
-::: {.notes}
-Opening slide.
-:::
-
----
 
 ## Averages Hide the Story {background-color="#ffffff"}
 
@@ -140,6 +121,30 @@ Snell et al. *AoB PLANTS* 2019
 
 ::: {.notes}
 All three kernels have the same mean. But only one of them captures what actually happens when a few individuals move very far. And that's the one that matches reality.
+:::
+
+---
+
+::: {.r-stretch}
+![](images/origin_story.png)
+:::
+
+---
+
+::: {.r-stretch}
+![](images/indiv_fits_to_shados.png)
+:::
+
+---
+
+::: {.r-stretch}
+![](images/focus_on_tail.png)
+:::
+
+---
+
+::: {.r-stretch}
+![](images/extended_kernels.png)
 :::
 
 ---
@@ -248,6 +253,13 @@ Standard kernel fitting is still trying to describe the whole distribution. EVT 
 
 ---
 
+## What is the Central Limit Theorem? {background-color="#ffffff"}
+
+<iframe src="https://javirudolph.shinyapps.io/CLT_101/" 
+        width="100%" height="600px" 
+        frameborder="0">
+</iframe>
+
 ## What is Extreme Value Theory? {background-color="#0E2841" .white-text}
 
 :::: {.columns}
@@ -296,13 +308,6 @@ Ecology has known it needed this tool since 1993. It's taken us this long to sta
 :::
 
 ---
-
-## What is the Central Limit Theorem? {background-color="#ffffff"}
-
-<iframe src="https://javirudolph.shinyapps.io/CLT_101/" 
-        width="100%" height="600px" 
-        frameborder="0">
-</iframe>
 
 ## EVT Applied to Dispersal: García & Borda-de-Água 2017 {background-color="#ffffff"}
 
