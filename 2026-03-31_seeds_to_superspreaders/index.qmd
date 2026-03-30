@@ -3,10 +3,10 @@ title: "From Seed Dispersal to Superspreaders"
 subtitle: "Extreme Value Theory as a Mechanistic Framework for Pathogen Dispersal in Wildlife Systems"
 author: "Francisca Javiera Rudolph, PhD"
 institute: "University of Florida Libraries | One Health Center of Excellence"
-date: "March 2026"
+date: "March 31, 2026"
 format:
   revealjs:
-    theme: [default, custom_v2.scss]
+    theme: [default, custom_v4.scss]
     scrollable: true
     slide-number: true
     show-slide-number: speaker
@@ -23,7 +23,8 @@ format:
     chalkboard: false
     multiplex: false
     title-slide-attributes:
-      data-background-color: "#196B24"
+      data-background-color: "white"
+    # logo: "images/SmathersLibraries-RASTER-RGB.png"
 execute:
   echo: false
   warning: false
@@ -90,9 +91,6 @@ Hertel et al. *Movement Ecology* 2020
 
 ::::
 
-::: {.notes}
-Movement ecologists have been throwing away the most interesting part of their data.
-:::
 
 ---
 
