@@ -36,7 +36,7 @@ execute:
 ::: {.column width="55%"}
 - **Individual specialization is widespread across taxa** — the rule, not the exception
 - The population niche is broad not because every individual is a generalist, but because **different individuals are doing different things**
-- The population niche obscures individual variation — **same mean, different biology**
+- The population niche obscures individual variation — **same mean, different biology/behavior**
 
 ::: {.citation}
 Bolnick et al. *The American Naturalist* 2003 · Zwolak *Biol Rev* 2018
@@ -44,11 +44,11 @@ Bolnick et al. *The American Naturalist* 2003 · Zwolak *Biol Rev* 2018
 :::
 
 ::: {.column width="45%"}
-::: {.placeholder-box}
-[PLACEHOLDER: Bolnick Figure 1 — WIC/TNW niche diagram]
+::: {.r-stretch}
+![](images/bolnick_2003.jpg)
 :::
-::: {.placeholder-box}
-[PLACEHOLDER: Zwolak convex/concave Jensen's inequality figure]
+::: {.citation}
+Bolnick et al. *The American Naturalist* 2003
 :::
 :::
 
