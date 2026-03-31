@@ -1,6 +1,6 @@
 ---
 title: "From Seed Dispersal to Superspreaders"
-subtitle: "Extreme Value Theory as a Mechanistic Framework for Pathogen Dispersal in Wildlife Systems"
+subtitle: "An Extreme Value Theory Approach to Wildlife Disease Transmission"
 author: "Francisca Javiera Rudolph, PhD"
 institute: 
   - "University of Florida George A. Smathers Libraries"
@@ -382,6 +382,59 @@ The shape parameter ξ > 0 — fat tail — and the conditional probability of a
 
 ---
 
+## Individual Variation in Disease Transmission {background-color="#0E2841" .white-text}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.citation-light}
+"Population-level analyses often use average quantities to describe heterogeneous systems..."  
+— Lloyd-Smith et al. *Nature* 2005
+:::
+
+### Sound familiar?
+
+$R_0$ is an average. It hides the same individual variation we saw in dispersal kernels:
+
+- Most individuals infect zero or one
+- A few infect many — **superspreaders**
+
+::: {.key-insight}
+Individual reproductive number, $\nu$, as a random variable representing the expected number of secondary cases caused by a particular infected individual.
+:::
+
+
+:::
+
+::: {.column width="50%"}
+![](images/lloyd-smith-fig1.png)
+
+:::
+  
+::::
+
+::: {.fragment .fade-in}
+![](images/lloyd-smith-fig2.png)
+
+- Same $R_0$, six different epidemiological worlds.
+- More heterogeneity means more outbreaks die out, but the ones that don't are explosive.
+- **k describes the shape of that individual variation, but where does k come from?**
+:::
+
+
+
+::: {.notes}
+The opening quote of Lloyd-Smith is the same argument I've been making about seed dispersal for the last five slides. Population averages hide the mechanism. R₀ hides individual variation in infectiousness exactly the way a pooled dispersal kernel hides individual variation in movement.
+
+Lloyd-Smith's solution was statistical — fit a negative binomial, estimate k. That works when you have contact tracing data, which you have for SARS, measles, smallpox. You do not have that for wildlife pathogens. You have GPS collars.
+
+Figure 2 is the machinery I'm replacing. They draw ν from a Gamma distribution — mathematically convenient, empirically reasonable. But it's an assumption. My framework derives the distribution of ν from movement data using EVT. When movement kernels have ξ > 0 — which they do, consistently, across taxa — the individual reproductive numbers follow a Lomax distribution. The Lomax is heavier-tailed than the Gamma. That changes the extinction probability surface and the outbreak size distribution in ways that matter for wildlife disease management.
+
+Lloyd-Smith described the pattern. EVT explains the process.
+:::
+
+
 ## What About Disease Ecology? {background-color="#0E2841" .white-text}
 
 :::: {.columns}
@@ -428,7 +481,7 @@ for disease outbreak potential
 
 ::: {.notes}
 Lloyd-Smith 2005 is the landmark paper. They showed individual variation in infectiousness is real and consequential. But they treated it statistically — not mechanistically. For wildlife, the mechanism is movement. Heavy-tailed movement generates heavy-tailed contact distributions, which generate heavy-tailed offspring distributions. Xi from GPS data predicts k before a pathogen is even detected.
-:::
+::: 
 
 ---
 

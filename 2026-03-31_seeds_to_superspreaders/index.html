@@ -129,7 +129,7 @@
 
 <section id="title-slide" data-background-color="white" class="quarto-title-block center">
   <h1 class="title">From Seed Dispersal to Superspreaders</h1>
-  <p class="subtitle">Extreme Value Theory as a Mechanistic Framework for Pathogen Dispersal in Wildlife Systems</p>
+  <p class="subtitle">An Extreme Value Theory Approach to Wildlife Disease Transmission</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -342,6 +342,51 @@ Beisel et.al (2007). <em>Testing the extreme value domain of attraction for dist
 <p>The argument is simple: ξ is not arbitrary. It reflects something real about how individuals move. When you allow individuals to differ, the resulting seed shadow has a fat tail, and the shape parameter you recover from fitting EVT to that tail traces back to the biological mechanism.</p>
 <p>This is what justifies the next move — taking that same logic into disease systems. If ξ encodes movement process in seed dispersal, it encodes transmission process in pathogen dispersal. Same mathematics, new biological context.</p>
 <p>When I allow individual variation in frugivore movement, I get more long-distance dispersal events in my simulated seed shadows. I fit a Generalized Pareto to the tail of those simulated kernels. The shape parameter ξ &gt; 0 — fat tail — and the conditional probability of a seed reaching beyond 500m, 1km, is meaningfully higher under individual variation than under the pooled model.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="individual-variation-in-disease-transmission" class="slide level2 white-text" data-background-color="#0E2841">
+<h2>Individual Variation in Disease Transmission</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="citation-light">
+<p>“Population-level analyses often use average quantities to describe heterogeneous systems…”<br>
+— Lloyd-Smith et al.&nbsp;<em>Nature</em> 2005</p>
+</div>
+<h3 id="sound-familiar">Sound familiar?</h3>
+<p><span class="math inline">\(R_0\)</span> is an average. It hides the same individual variation we saw in dispersal kernels:</p>
+<ul>
+<li>Most individuals infect zero or one</li>
+<li>A few infect many — <strong>superspreaders</strong></li>
+</ul>
+<div class="key-insight">
+<p>Individual reproductive number, <span class="math inline">\(\nu\)</span>, as a random variable representing the expected number of secondary cases caused by a particular infected individual.</p>
+</div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/lloyd-smith-fig1.png"></p>
+</div></div>
+<div class="fragment fade-in">
+<p><img data-src="images/lloyd-smith-fig2.png"></p>
+<ul>
+<li>Same <span class="math inline">\(R_0\)</span>, six different epidemiological worlds.</li>
+<li>More heterogeneity means more outbreaks die out, but the ones that don’t are explosive.</li>
+<li><strong>k describes the shape of that individual variation, but where does k come from?</strong></li>
+</ul>
+</div>
+<aside class="notes">
+<p>The opening quote of Lloyd-Smith is the same argument I’ve been making about seed dispersal for the last five slides. Population averages hide the mechanism. R₀ hides individual variation in infectiousness exactly the way a pooled dispersal kernel hides individual variation in movement.</p>
+<p>Lloyd-Smith’s solution was statistical — fit a negative binomial, estimate k. That works when you have contact tracing data, which you have for SARS, measles, smallpox. You do not have that for wildlife pathogens. You have GPS collars.</p>
+<p>Figure 2 is the machinery I’m replacing. They draw ν from a Gamma distribution — mathematically convenient, empirically reasonable. But it’s an assumption. My framework derives the distribution of ν from movement data using EVT. When movement kernels have ξ &gt; 0 — which they do, consistently, across taxa — the individual reproductive numbers follow a Lomax distribution. The Lomax is heavier-tailed than the Gamma. That changes the extinction probability surface and the outbreak size distribution in ways that matter for wildlife disease management.</p>
+<p>Lloyd-Smith described the pattern. EVT explains the process.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
