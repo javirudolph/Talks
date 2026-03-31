@@ -216,10 +216,6 @@ Francisca Javiera Rudolph, PhD
 
 
 <img data-src="images/indiv_fits_to_shados.png" class="r-stretch"></section>
-<section class="slide level2">
-
-
-<img data-src="images/focus_on_tail.png" class="r-stretch"></section>
 <section id="central-limit-theorem-clt-extreme-value-theory-evt" class="slide level2">
 <h2>Central Limit Theorem (CLT) &amp; Extreme Value Theory (EVT)</h2>
 <h3 id="the-special-rules-in-statistics">The special rules in statistics</h3>
@@ -257,134 +253,6 @@ Francisca Javiera Rudolph, PhD
 </div>
 </div>
 </div></div>
-</section>
-<section class="slide level2">
-
-<div class="columns">
-<div class="fragment fade-in column" style="width:45%;">
-<p><img data-src="images/extended_kernels1.png"></p>
-</div><div class="column" style="width:2%;">
-
-</div><div class="fragment fade-in column" style="width:52%;">
-<p><img data-src="images/extended_kernels2.png"></p>
-</div></div>
-</section>
-<section id="incorporating-individual-variation-increases-ldd-events" class="slide level2" data-background-color="#ffffff">
-<h2>Incorporating Individual Variation Increases LDD Events</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="placeholder-box">
-<p>[PLACEHOLDER: Movement tracks — slow vs fast individuals (scatter/line plot)]</p>
-</div>
-<div class="placeholder-box">
-<p>[PLACEHOLDER: Seed shadow comparison — pooled vs individual kernels]</p>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="placeholder-box">
-<p>[PLACEHOLDER: LDD probability comparison figure — no pooling vs complete pooling]</p>
-</div>
-<div class="stat-callout">
-<p><strong>Crop size: 15,671 ± 5,101 fruits</strong><br>
-Small probabilities × large crop = many long-distance seeds</p>
-</div>
-<div class="citation">
-<p>Holbrook &amp; Loiselle 2009 <em>Ecology</em> · Rudolph 2022</p>
-</div>
-</div></div>
-<aside class="notes">
-<p>Consequences of individual variation in animal movement — in frugivores, it translates to an increase in the number of long-distance seed dispersal events.</p>
-<p>We know there is a link from mechanism to outcome. Now we need a framework.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="shifting-focus-from-the-whole-kernel-to-the-tail" class="slide level2" data-background-color="#ffffff">
-<h2>Shifting Focus: From the Whole Kernel to the Tail</h2>
-<div class="columns">
-<div class="column" style="width:55%;">
-<p>Standard kernel fitting — even with individual variation — is still trying to describe <strong>the whole distribution</strong>.</p>
-<p><strong>EVT says:</strong> stop trying to fit the whole thing. Focus only on the tail, where it matters. Let the data above a threshold speak for themselves.</p>
-<ul>
-<li><strong>Block maxima</strong> → Generalized Extreme Value distribution</li>
-<li><strong>Peaks over Threshold</strong> → Generalized Pareto Distribution</li>
-</ul>
-<div class="citation">
-<p>García &amp; Borda-de-Água <em>Journal of Ecology</em> 2017</p>
-</div>
-</div><div class="column" style="width:45%;">
-<div class="placeholder-box">
-<p>[PLACEHOLDER: Weibull fit vs GPD threshold fit comparison — from dissertation figures]</p>
-</div>
-<div class="placeholder-box">
-<p>[PLACEHOLDER: Generalized Pareto fits at different thresholds]</p>
-</div>
-</div></div>
-<aside class="notes">
-<p>Standard kernel fitting is still trying to describe the whole distribution. EVT says: stop trying to fit the whole thing. Focus only on the tail, where it matters. Let the data above a threshold speak for themselves.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="what-is-the-central-limit-theorem" class="slide level2" data-background-color="#ffffff">
-<h2>What is the Central Limit Theorem?</h2>
-<iframe src="https://javirudolph.shinyapps.io/CLT_101/" width="100%" height="600px" frameborder="0">
-</iframe>
-</section>
-<section id="what-is-extreme-value-theory" class="slide level2 white-text" data-background-color="#0E2841">
-<h2>What is Extreme Value Theory?</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="the-central-limit-theorem">The Central Limit Theorem</h3>
-<p>No matter what your data look like, if you take enough samples and calculate their averages — those averages will follow a <strong>normal distribution</strong>.</p>
-<p><em>It’s why the bell curve is everywhere in statistics.</em></p>
-<div class="placeholder-box-dark">
-<p>[PLACEHOLDER: CLT figure — uniform population → converging means]</p>
-</div>
-</div><div class="column" style="width:50%;">
-<h3 id="but-what-about-extremes">But what about extremes?</h3>
-<p>We rarely care about the average flood, the average wildfire, the average long-distance dispersal event.</p>
-<p><strong>EVT is the parallel theorem for maxima.</strong> No matter what your data look like, the distribution of extreme values converges to one of three known families — the <strong>Generalized Extreme Value distribution</strong>.</p>
-<p>The shape parameter <strong>ξ</strong> tells you everything:</p>
-<div class="xi-table">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>ξ &lt; 0</th>
-<th>Bounded tail (Weibull)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>ξ = 0</td>
-<td>Thin tail (Gumbel)</td>
-</tr>
-<tr class="even">
-<td><strong>ξ &gt; 0</strong></td>
-<td><strong>Fat tail (Fréchet) — power law</strong></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div></div>
-<div class="timeline-bar">
-<p><strong>1928</strong> Fisher &amp; Tippett theorem · <strong>1993</strong> Gaines &amp; Denny — first call for EVT in ecology · <strong>2005</strong> Katz et al.&nbsp;— EVT still underused · <strong>2017</strong> García &amp; Borda-de-Água — first formal application to dispersal kernels · <strong>This talk</strong> — movement → disease</p>
-</div>
 <aside class="notes">
 <p>WHAT IS EXTREME VALUE THEORY?</p>
 <p>The Central Limit Theorem says if you calculate averages, they converge to a Gaussian — regardless of the underlying distribution. That’s why it’s so useful.</p>
@@ -402,32 +270,26 @@ Small probabilities × large crop = many long-distance seeds</p>
           display:block!important;
       }</style></aside>
 </section>
-<section id="evt-applied-to-dispersal-garcía-borda-de-água-2017" class="slide level2" data-background-color="#ffffff">
-<h2>EVT Applied to Dispersal: García &amp; Borda-de-Água 2017</h2>
+<section class="slide level2">
+
+
+<img data-src="images/focus_on_tail.png" class="r-stretch"></section>
+<section class="slide level2">
+
 <div class="columns">
-<div class="column" style="width:55%;">
-<ul>
-<li>LDD events are <strong>extreme values of a dispersal function</strong> — EVT is designed for exactly this</li>
-<li>Seed dispersal in <em>Prunus mahaleb</em>: above threshold, seeds fit a <strong>fat-tailed Pareto</strong> (ξ &gt; 0)</li>
-<li>Estimated Pr(seed reaches 10 km) = 7 × 10⁻⁵ — small, but biologically consequential at crop sizes of thousands of seeds</li>
-<li>EVT gives a <strong>quantitative, objective definition of LDD</strong> — not an arbitrary percentile</li>
-</ul>
-<div class="quote-block">
-<p><em>“Dispersal ecologists can take the most of their dispersal distance records by applying statistics of extremes.”</em></p>
-</div>
-<div class="citation">
-<p>García &amp; Borda-de-Água <em>Journal of Ecology</em> 2017</p>
-</div>
-</div><div class="column" style="width:45%;">
-<div class="placeholder-box">
-<p>[PLACEHOLDER: García Fig 1 — range of dispersal distances + EVT extrapolation]</p>
-</div>
-<div class="placeholder-box">
-<p>[PLACEHOLDER: García Fig 3 — fitted GPD to seed dispersal distances]</p>
-</div>
+<div class="fragment fade-in column" style="width:45%;">
+<p><img data-src="images/extended_kernels1.png"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="fragment fade-in column" style="width:52%;">
+<p><img data-src="images/extended_kernels2.png"></p>
 </div></div>
 <aside class="notes">
 <p>García and Borda-de-Água showed that if you treat long-distance dispersal events as exactly what they are — extremes — you can estimate probabilities of dispersal distances you never observed in your study. That’s the power of EVT. And that’s exactly what I did with my aracari data.</p>
+<p>When I allow individual variation in frugivore movement, I get more long-distance dispersal events in my simulated seed shadows. I fit a Generalized Pareto to the tail of those simulated kernels. The shape parameter ξ &gt; 0 — fat tail — and the conditional probability of a seed reaching beyond 500m, 1km, is meaningfully higher under individual variation than under the pooled model.</p>
+<p>Consequences of individual variation in animal movement — in frugivores, it translates to an increase in the number of long-distance seed dispersal events.</p>
+<p>We know there is a link from mechanism to outcome. Now we need a framework.</p>
+<p>Standard kernel fitting is still trying to describe the whole distribution. EVT says: stop trying to fit the whole thing. Focus only on the tail, where it matters. Let the data above a threshold speak for themselves.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -439,6 +301,9 @@ Small probabilities × large crop = many long-distance seeds</p>
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+<section class="slide level2">
+
 </section>
 <section id="my-results-evt-applied-to-aracari-movement" class="slide level2" data-background-color="#ffffff">
 <h2>My Results: EVT Applied to Aracari Movement</h2>
