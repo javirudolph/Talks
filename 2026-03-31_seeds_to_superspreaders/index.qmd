@@ -112,6 +112,310 @@ My dissertation. These birds are the primary dispersal vector for tropical trees
 
 ---
 
+## Central Limit Theorem (CLT) & Extreme Value Theory (EVT)
+### The special rules in statistics
+
+
+:::: {.columns}
+::: {.fragment .fade-in .column width=50%}
+- CLT = gather data -> take average -> repeat many times
+  - averages are normally distributed 
+
+```{r message=FALSE}
+# Set the random seed for reproducibility
+set.seed(27)
+
+# Generate a non-normally distributed population
+population <- runif(5000, min = 0, max = 1)
+
+# Create a histogram of the population
+par(mfrow = c(1, 2))  # Set up a 1x2 grid for plotting
+
+# Plot the histogram of the population
+hist(population, breaks = 30, prob = TRUE, main = "Population Distribution",
+     xlab = "Value", col = "deepskyblue4")
+
+# Step 2 and 3: Draw random samples and calculate sample means
+sample_size <- 30
+num_samples <- 300
+
+# Empty vector to store sample means
+sample_means <- c()
+
+for (i in 1:num_samples) {
+  # Take a random sample
+  sample <- sample(population, size = sample_size, replace = TRUE)
+  
+  # Calculate the mean of the sample
+  sample_means[i] <- mean(sample)
+}
+
+# For sample
+x_bar <- mean(sample_means)
+std <- sd(sample_means)
+
+# print('Sample Mean and Variance')
+# print(x_bar)
+# print(std**2)
+
+# For Population
+mu <- mean(population)
+sigma <- sd(population)
+
+# print('Population Mean and Variance')
+# print(mu)
+# print((sigma**2)/sample_size)
+
+# Plot the histogram of sample means
+hist(sample_means, breaks = 30, prob = TRUE, main = "Distribution of Sample Means",
+     xlab = "Sample Mean", col = "gold3")
+
+# Overlay density curves
+curve(dnorm(x, mean = x_bar, sd = std), col = "black", lwd = 2, add = TRUE)
+# curve(dnorm(x, mean = mu, sd = sigma^2), col = "red", lwd = 2, add = TRUE)
+
+# Add labels and legends
+legend("topright", legend = c("Distribution Curve"),
+       col = c("black"), lwd = 2)
+
+# Reset the plot layout
+par(mfrow = c(1, 1))
+```
+
+::: {.citation}
+The Central Limit theorem states that the distribution of sample means approaches a normal distribution as the sample size increases, regardless of the population's original distribution.
+:::
+:::
+
+::: {.fragment .fade-in .column width=50%}
+::: {.key-insight}
+Extreme Value Theory states that regardless of the underlying data-generating process, the behavior of extreme observations — the rare, large events in the tail — converges to a Generalized Extreme Value distribution. **The tail has its own universal structure.**
+:::
+
+```{r}
+set.seed(27)
+# Same population — exponential, heavy right tail, definitely not normal
+# population <- rexp(5000, rate = 1)
+# population <- rnorm(5000)
+population <- runif(5000, min = 0, max = 1)
+
+par(mfrow = c(1, 2))
+
+# Left panel: the underlying population
+hist(population, breaks = 40, prob = TRUE,
+     main = "Population Distribution",
+     xlab = "Value", col = "deepskyblue4", border = "white")
+
+# Right panel: distribution of block maxima
+block_size  <- 30
+num_blocks  <- 500
+block_maxima <- numeric(num_blocks)
+
+for (i in 1:num_blocks) {
+  block_maxima[i] <- max(sample(population, size = block_size, replace = TRUE))
+}
+
+hist(block_maxima, breaks = 30, prob = TRUE,
+     main = "Distribution of Block Maxima",
+     xlab = "Maximum value", col = "darkorange3", border = "white")
+
+# Fit and overlay a GEV curve using evd package
+if (requireNamespace("evd", quietly = TRUE)) {
+  fit <- evd::fgev(block_maxima)
+  loc   <- fit$estimate["loc"]
+  scale <- fit$estimate["scale"]
+  shape <- fit$estimate["shape"]
+  curve(evd::dgev(x, loc = loc, scale = scale, shape = shape),
+        col = "black", lwd = 2, add = TRUE)
+  legend("topright", legend =  paste0("GEV fit  |  ξ = ", round(shape, 2)), col = "black", lwd = 2)
+}
+
+par(mfrow = c(1, 1))
+```
+
+
+```{r eval=FALSE}
+set.seed(27)
+# Heavy-tailed population — lognormal works well visually
+population <- rlnorm(10000, meanlog = 0, sdlog = 1)
+
+par(mfrow = c(1, 2))
+
+# Left panel: full population with threshold marked
+u <- quantile(population, 0.90)  # 90th percentile as threshold
+
+hist(population, breaks = 60, prob = TRUE,
+     main = "Population Distribution",
+     xlab = "Value", col = "deepskyblue4", border = "white",
+     xlim = c(0, 12))
+abline(v = u, col = "darkorange3", lwd = 2, lty = 2)
+legend("topright", legend = paste0("Threshold u = ", round(u, 2)),
+       col = "darkorange3", lwd = 2, lty = 2)
+
+# Right panel: exceedances above threshold
+exceedances <- population[population > u] - u
+
+hist(exceedances, breaks = 30, prob = TRUE,
+     main = "Threshold Exceedances",
+     xlab = "Excess above threshold (x − u)",
+     col = "darkorange3", border = "white")
+
+# Fit and overlay GPD
+if (requireNamespace("evd", quietly = TRUE)) {
+  fit <- evd::fpot(population, threshold = u)
+  scale <- fit$estimate["scale"]
+  shape <- fit$estimate["shape"]
+  curve(evd::dgpd(x, loc = 0, scale = scale, shape = shape),
+        col = "black", lwd = 2, add = TRUE)
+  legend("topright",
+         legend = paste0("GPD fit\nξ = ", round(shape, 2)),
+         col = "black", lwd = 2)
+}
+
+par(mfrow = c(1, 1))
+```
+
+:::
+::::
+
+---
+
+
+## The three domains of attraction {.smaller}
+
+*The same method applied to three different worlds — ξ tells you which world you're in.*
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-width: 11
+#| fig-height: 7
+
+library(evd)
+
+set.seed(27)
+n         <- 10000
+threshold <- 0.90   # use 90th percentile as threshold in each case
+
+# ── Data-generating processes ──────────────────────────────────────────────
+frechet_data <- rlnorm(n, meanlog = 0, sdlog = 1.2)   # heavy tail  → ξ > 0
+gumbel_data  <- rexp(n, rate = 1)                      # light tail  → ξ ≈ 0
+weibull_data <- runif(n, min = 0, max = 1)             # bounded     → ξ < 0
+
+datasets <- list(
+  list(data  = frechet_data,
+       label = "Lognormal",
+       sub   = "Heavy tail — Fréchet domain",
+       col   = "#7F77DD",
+       xlim  = c(0, 15)),
+  list(data  = gumbel_data,
+       label = "Exponential",
+       sub   = "Light tail — Gumbel domain",
+       col   = "#1D9E75",
+       xlim  = c(0, 8)),
+  list(data  = weibull_data,
+       label = "Uniform",
+       sub   = "Bounded tail — Weibull domain",
+       col   = "#D85A30",
+       xlim  = c(0, 1))
+)
+
+par(mfrow = c(2, 3),
+    mar   = c(4, 4, 3, 1),
+    oma   = c(0, 0, 2, 0),
+    bg    = "transparent")
+
+for (d in datasets) {
+
+  x   <- d$data
+  u   <- quantile(x, threshold)
+  exc <- x[x > u] - u
+
+  # ── Row 1: population with threshold ────────────────────────────────────
+  hist(x,
+       breaks  = 50,
+       prob    = TRUE,
+       main    = d$label,
+       xlab    = "Value",
+       ylab    = "Density",
+       col     = adjustcolor(d$col, alpha.f = 0.55),
+       border  = "white",
+       xlim    = d$xlim,
+       cex.main = 1.1,
+       cex.lab  = 0.9,
+       cex.axis = 0.85)
+
+  abline(v   = u,
+         col = "grey30",
+         lwd = 2,
+         lty = 2)
+
+  mtext(d$sub,
+        side = 3, line = 0,
+        cex  = 0.75,
+        col  = "grey40")
+
+  legend("topright",
+         legend   = paste0("u = ", round(u, 2)),
+         col      = "grey30",
+         lwd      = 2,
+         lty      = 2,
+         cex      = 0.78,
+         bty      = "n")
+
+  # ── Row 2: GPD fit to exceedances ────────────────────────────────────────
+  fit   <- fpot(x, threshold = u)
+  sc    <- fit$estimate["scale"]
+  sh    <- fit$estimate["shape"]
+  label <- paste0("GPD fit  |  ξ = ", round(sh, 2))
+
+  hist(exc,
+       breaks  = 30,
+       prob    = TRUE,
+       main    = "Threshold exceedances",
+       xlab    = "Excess  (x − u)",
+       ylab    = "Density",
+       col     = adjustcolor(d$col, alpha.f = 0.35),
+       border  = "white",
+       cex.main = 1.0,
+       cex.lab  = 0.9,
+       cex.axis = 0.85)
+
+  curve(dgpd(x, loc = 0, scale = sc, shape = sh),
+        col = "grey20",
+        lwd = 2.5,
+        add = TRUE)
+
+  legend("topright",
+         legend = label,
+         col    = "grey20",
+         lwd    = 2.5,
+         cex    = 0.85,
+         bty    = "n")
+}
+
+mtext(
+  expression(
+    bold("POT applied to three distributions") ~~ "|" ~~
+    "same procedure, same estimator — " *
+    xi * " recovers the tail structure each time"
+  ),
+  outer = TRUE,
+  side  = 3,
+  cex   = 0.95
+)
+
+par(mfrow = c(1, 1))
+```
+
+::: {.callout-note appearance="minimal"}
+Animal movement data consistently returns **ξ > 0** — placing dispersal kernels in the Fréchet domain. This is not a modeling assumption. It is an empirical regularity across taxa.
+:::
+
+---
+
+
 ::: {.r-stretch}
 ![](images/extended_kernels.png)
 :::

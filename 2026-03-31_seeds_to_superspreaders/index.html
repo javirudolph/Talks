@@ -220,6 +220,56 @@ Francisca Javiera Rudolph, PhD
 
 
 <img data-src="images/focus_on_tail.png" class="r-stretch"></section>
+<section id="central-limit-theorem-clt-extreme-value-theory-evt" class="slide level2">
+<h2>Central Limit Theorem (CLT) &amp; Extreme Value Theory (EVT)</h2>
+<h3 id="the-special-rules-in-statistics">The special rules in statistics</h3>
+<div class="columns">
+<div class="fragment fade-in column" style="width:50%;">
+<ul>
+<li>CLT = gather data -&gt; take average -&gt; repeat many times
+<ul>
+<li>averages are normally distributed</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="citation">
+<p>The Central Limit theorem states that the distribution of sample means approaches a normal distribution as the sample size increases, regardless of the population’s original distribution.</p>
+</div>
+</div><div class="fragment fade-in column" style="width:50%;">
+<div class="key-insight">
+<p>Extreme Value Theory states that regardless of the underlying data-generating process, the behavior of extreme observations — the rare, large events in the tail — converges to a Generalized Extreme Value distribution. <strong>The tail has its own universal structure.</strong></p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="the-three-domains-of-attraction" class="slide level2 smaller">
+<h2>The three domains of attraction</h2>
+<p><em>The same method applied to three different worlds — ξ tells you which world you’re in.</em></p>
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-4-1.png" width="1056" class="r-stretch"><div class="callout callout-note no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p>Animal movement data consistently returns <strong>ξ &gt; 0</strong> — placing dispersal kernels in the Fréchet domain. This is not a modeling assumption. It is an empirical regularity across taxa.</p>
+</div>
+</div>
+</div>
+</section>
 <section class="slide level2">
 
 
@@ -807,6 +857,44 @@ Invasive semiaquatic carnivore in Chilean Patagonia</p>
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
