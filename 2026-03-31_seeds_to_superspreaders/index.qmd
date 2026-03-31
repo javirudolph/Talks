@@ -279,10 +279,21 @@ par(mfrow = c(1, 1))
 
 ---
 
+:::: {.columns}
 
-::: {.r-stretch}
-![](images/extended_kernels.png)
+::: {.fragment .fade-in .column width=45%}
+![](images/extended_kernels1.png)
 :::
+
+::: {.column width=2%}
+:::
+
+::: {.fragment .fade-in .column width=52%}
+![](images/extended_kernels2.png)
+:::
+
+::::
+
 
 ---
 
