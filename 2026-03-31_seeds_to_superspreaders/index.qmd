@@ -559,7 +559,7 @@ here is a natural extension of an existing framework, and when you make this one
 ## Simulation {background-color="#ffffff"}
 
 <iframe 
-  src="https://youruser.shinyapps.io/yourapp/" 
+  src="https://javirudolph.shinyapps.io/lomax_evt/" 
   width="100%" 
   height="700px" 
   frameborder="0"
