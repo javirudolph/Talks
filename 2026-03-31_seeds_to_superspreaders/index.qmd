@@ -436,40 +436,111 @@ The branching process is the entire model — there is no SIR, no compartments, 
 
 ---
 
-
-
-## One Framework, Three Scales {background-color="#ffffff"}
+## The Mechanistic Foundation {background-color="#ffffff"}
 
 :::: {.columns}
 
-::: {.column width="40%" .incremental}
-Three kernels — each shaped by the tail of the one before:
+::: {.column width="50%"}
+**Ponciano & Capistrán (2011)** derive the incidence rate from first principles:
 
-**Individual Movement Kernel**  
-Estimated from GPS tracking
+- An infected individual has *realized disease dispersion* $a$
+- Number of successful transmission encounters $X(a)$ follows a **pure birth process**
+- Probability of at least one infection:
 
-**Pathogen Dispersal Kernel**  
-Movement × contact probability = transmission
-*Camera traps*
+$$P(X(a) \geq 1) = 1 - e^{-a \cdot b \cdot h(I)}$$
 
-**Outbreak Spread Kernel**  
-Population-level dynamics - case numbers
+When dispersion effort $\Lambda$ is exponentially distributed across individuals:
+
+$$P(X(a) \geq 1) = \int_0^\infty \left(1 - e^{-\lambda h(I)}\right) \alpha e^{-\alpha \lambda} \, d\lambda = \frac{h(I)}{h(I) + \alpha}$$
+
+::: {.citation}
+Ponciano & Capistrán. *PLoS Computational Biology* 2011
+:::
+:::
+
+::: {.column width="50%"}
 
 ::: {.key-insight}
-The EVT shape parameter **$\xi$** from tracking data propagates predictive power through the entire cascade
-:::
+**Individual variation matters here:**  
+The exponential distribution for $\Lambda$ already allows individuals to differ in how much they disperse pathogen.  
+But the exponential has a **thin tail** — it does not generate superspreaders.
 :::
 
-::: {.column width="60%"}
-::: {.placeholder-box-tall}
-[PLACEHOLDER: Three-scale cascade diagram — individual kernel *to* pathogen kernel *to* outbreak kernel, with $\xi$ propagating through]
+::: {.fragment .fade-in .question-block}
+*What if dispersion effort follows a heavier-tailed distribution?*  
+*What if — like seed dispersers — some infected individuals are true long-distance movers?*
 :::
+
 :::
 
 ::::
 
 ::: {.notes}
-The formal architecture. You start with what you can measure: individual movement distances from GPS tracking. Combined with contact probability as a function of distance, you get the pathogen dispersal kernel. Aggregated across the population, you get outbreak spread. The fat or thin tail propagates forward through every step. Xi is estimated once, from tracking data, and gives you information about all three levels.
+Ponciano and Capistran gave us the scaffolding. The pure birth process is elegant: the probability that you produce at least one infection grows with your realized dispersion effort a. The exponential model for Lambda averages over individual heterogeneity and gives you the LHD incidence rate. But the exponential is thin-tailed — it cannot generate the kind of extreme dispersion events that produce superspreaders. We need to go one step further.
+:::
+
+---
+
+## From Movement to Superspreaders: The Lomax Emerges {background-color="#ffffff"}
+
+:::: {.columns}
+
+::: {.column width="55%"}
+
+**What if dispersion effort $a$ is itself heterogeneous?**
+
+Allow dispersion effort $a$, to be distributed as an
+exponential distribution, whose parameter is sampled from a gamma distribu-
+tion: 
+
+Let $A \sim \text{Gamma}(\theta, \tau)$ — individual variation in transmission potential — and $Y \mid A \sim \text{Exp}(A)$ — realized dispersion given that potential.
+
+Then the marginal distribution of $Y$ is:
+
+$$f_Y(y) = \int_0^\infty a e^{-ay} \cdot \frac{\theta^\tau}{\Gamma(\tau)} a^{\tau-1} e^{-\theta a} \, da = \frac{\tau \theta^\tau}{(y + \theta)^{\tau+1}}$$
+
+::: {.stat-callout}
+This is the **Lomax distribution** — special case of a GPD - a heavy-tailed distribution with support on $[0, \infty)$.  
+The tail emerges mechanistically from the compound structure.
+:::
+
+And the probability of transmission under Lomax-distributed dispersion:
+
+$$P(X(a) \geq 1) = \int_0^\infty \left(1 - e^{-abE}\right) \frac{\tau \theta^\tau}{(a+\theta)^{\tau+1}} \, da$$
+
+:::
+
+::: {.column width="45%"}
+
+::: {.key-insight}
+**The Gamma is the movement**  
+
+
+$\theta$ and $\tau$ are not abstract parameters — they characterize how individuals in a population move. Some animals are homebodies, some are explorers. 
+
+That variation across individuals, captured by the Gamma, is what drives the heavy tail.
+
+Allow the movement to vary, and EVT drops out the other end.
+
+:::
+
+::: {.citation}
+Rudolph & Ponciano (2025) Biorxiv | Rudolph (in.prep)
+:::
+
+:::
+
+::::
+
+::: {.notes}
+Ponciano-Capistrán give you a first-principles framework where transmission probability depends on a dispersion effort parameter a, and they model the heterogeneity in a across individuals using an exponential distribution. 
+
+what if we let that exponential rate itself vary? Instead of a fixed rate, you draw it from a Gamma distribution — and that Gamma is the movement. The parameters θ and τ characterize how individuals in a population move. The Gamma is biologically interpretable as the movement kernel.
+
+when you integrate out that Gamma-distributed rate, the marginal distribution of dispersion effort is Lomax. And the Lomax is a special case of the Generalized Pareto — which is exactly the EVT family
+
+here is a natural extension of an existing framework, and when you make this one biologically motivated move, EVT drops out the other end.
+
 :::
 
 ---

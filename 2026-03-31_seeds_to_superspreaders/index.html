@@ -400,27 +400,78 @@ Beisel et.al (2007). <em>Testing the extreme value domain of attraction for dist
           display:block!important;
       }</style></aside>
 </section>
-<section id="one-framework-three-scales" class="slide level2" data-background-color="#ffffff">
-<h2>One Framework, Three Scales</h2>
+<section id="the-mechanistic-foundation" class="slide level2" data-background-color="#ffffff">
+<h2>The Mechanistic Foundation</h2>
 <div class="columns">
-<div class="column" style="width:40%;">
-<p>Three kernels — each shaped by the tail of the one before:</p>
-<p><strong>Individual Movement Kernel</strong><br>
-Estimated from GPS tracking</p>
-<p><strong>Pathogen Dispersal Kernel</strong><br>
-Movement × contact probability = transmission <em>Camera traps</em></p>
-<p><strong>Outbreak Spread Kernel</strong><br>
-Population-level dynamics - case numbers</p>
-<div class="key-insight">
-<p>The EVT shape parameter <strong><span class="math inline">\(\xi\)</span></strong> from tracking data propagates predictive power through the entire cascade</p>
+<div class="column" style="width:50%;">
+<p><strong>Ponciano &amp; Capistrán (2011)</strong> derive the incidence rate from first principles:</p>
+<ul>
+<li>An infected individual has <em>realized disease dispersion</em> <span class="math inline">\(a\)</span></li>
+<li>Number of successful transmission encounters <span class="math inline">\(X(a)\)</span> follows a <strong>pure birth process</strong></li>
+<li>Probability of at least one infection:</li>
+</ul>
+<p><span class="math display">\[P(X(a) \geq 1) = 1 - e^{-a \cdot b \cdot h(I)}\]</span></p>
+<p>When dispersion effort <span class="math inline">\(\Lambda\)</span> is exponentially distributed across individuals:</p>
+<p><span class="math display">\[P(X(a) \geq 1) = \int_0^\infty \left(1 - e^{-\lambda h(I)}\right) \alpha e^{-\alpha \lambda} \, d\lambda = \frac{h(I)}{h(I) + \alpha}\]</span></p>
+<div class="citation">
+<p>Ponciano &amp; Capistrán. <em>PLoS Computational Biology</em> 2011</p>
 </div>
-</div><div class="column" style="width:60%;">
-<div class="placeholder-box-tall">
-<p>[PLACEHOLDER: Three-scale cascade diagram — individual kernel <em>to</em> pathogen kernel <em>to</em> outbreak kernel, with <span class="math inline">\(\xi\)</span> propagating through]</p>
+</div><div class="column" style="width:50%;">
+<div class="key-insight">
+<p><strong>Individual variation matters here:</strong><br>
+The exponential distribution for <span class="math inline">\(\Lambda\)</span> already allows individuals to differ in how much they disperse pathogen.<br>
+But the exponential has a <strong>thin tail</strong> — it does not generate superspreaders.</p>
+</div>
+<div class="fragment fade-in question-block">
+<p><em>What if dispersion effort follows a heavier-tailed distribution?</em><br>
+<em>What if — like seed dispersers — some infected individuals are true long-distance movers?</em></p>
 </div>
 </div></div>
 <aside class="notes">
-<p>The formal architecture. You start with what you can measure: individual movement distances from GPS tracking. Combined with contact probability as a function of distance, you get the pathogen dispersal kernel. Aggregated across the population, you get outbreak spread. The fat or thin tail propagates forward through every step. Xi is estimated once, from tracking data, and gives you information about all three levels.</p>
+<p>Ponciano and Capistran gave us the scaffolding. The pure birth process is elegant: the probability that you produce at least one infection grows with your realized dispersion effort a. The exponential model for Lambda averages over individual heterogeneity and gives you the LHD incidence rate. But the exponential is thin-tailed — it cannot generate the kind of extreme dispersion events that produce superspreaders. We need to go one step further.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="from-movement-to-superspreaders-the-lomax-emerges" class="slide level2" data-background-color="#ffffff">
+<h2>From Movement to Superspreaders: The Lomax Emerges</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><strong>What if dispersion effort <span class="math inline">\(a\)</span> is itself heterogeneous?</strong></p>
+<p>Allow dispersion effort <span class="math inline">\(a\)</span>, to be distributed as an exponential distribution, whose parameter is sampled from a gamma distribu- tion:</p>
+<p>Let <span class="math inline">\(A \sim \text{Gamma}(\theta, \tau)\)</span> — individual variation in transmission potential — and <span class="math inline">\(Y \mid A \sim \text{Exp}(A)\)</span> — realized dispersion given that potential.</p>
+<p>Then the marginal distribution of <span class="math inline">\(Y\)</span> is:</p>
+<p><span class="math display">\[f_Y(y) = \int_0^\infty a e^{-ay} \cdot \frac{\theta^\tau}{\Gamma(\tau)} a^{\tau-1} e^{-\theta a} \, da = \frac{\tau \theta^\tau}{(y + \theta)^{\tau+1}}\]</span></p>
+<div class="stat-callout">
+<p>This is the <strong>Lomax distribution</strong> — special case of a GPD - a heavy-tailed distribution with support on <span class="math inline">\([0, \infty)\)</span>.<br>
+The tail emerges mechanistically from the compound structure.</p>
+</div>
+<p>And the probability of transmission under Lomax-distributed dispersion:</p>
+<p><span class="math display">\[P(X(a) \geq 1) = \int_0^\infty \left(1 - e^{-abE}\right) \frac{\tau \theta^\tau}{(a+\theta)^{\tau+1}} \, da\]</span></p>
+</div><div class="column" style="width:45%;">
+<div class="key-insight">
+<p><strong>The Gamma is the movement</strong></p>
+<p><span class="math inline">\(\theta\)</span> and <span class="math inline">\(\tau\)</span> are not abstract parameters — they characterize how individuals in a population move. Some animals are homebodies, some are explorers.</p>
+<p>That variation across individuals, captured by the Gamma, is what drives the heavy tail.</p>
+<p>Allow the movement to vary, and EVT drops out the other end.</p>
+</div>
+<div class="citation">
+<p>Rudolph &amp; Ponciano (2025) Biorxiv | Rudolph (in.prep)</p>
+</div>
+</div></div>
+<aside class="notes">
+<p>Ponciano-Capistrán give you a first-principles framework where transmission probability depends on a dispersion effort parameter a, and they model the heterogeneity in a across individuals using an exponential distribution.</p>
+<p>what if we let that exponential rate itself vary? Instead of a fixed rate, you draw it from a Gamma distribution — and that Gamma is the movement. The parameters θ and τ characterize how individuals in a population move. The Gamma is biologically interpretable as the movement kernel.</p>
+<p>when you integrate out that Gamma-distributed rate, the marginal distribution of dispersion effort is Lomax. And the Lomax is a special case of the Generalized Pareto — which is exactly the EVT family</p>
+<p>here is a natural extension of an existing framework, and when you make this one biologically motivated move, EVT drops out the other end.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
