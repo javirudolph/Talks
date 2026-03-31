@@ -202,9 +202,9 @@ population <- runif(5000, min = 0, max = 1)
 par(mfrow = c(1, 2))
 
 # Left panel: the underlying population
-hist(population, breaks = 40, prob = TRUE,
-     main = "Population Distribution",
-     xlab = "Value", col = "deepskyblue4", border = "white")
+# Plot the histogram of the population
+hist(population, breaks = 30, prob = TRUE, main = "Population Distribution",
+     xlab = "Value", col = "deepskyblue4")
 
 # Right panel: distribution of block maxima
 block_size  <- 30
@@ -231,6 +231,52 @@ if (requireNamespace("evd", quietly = TRUE)) {
 }
 
 par(mfrow = c(1, 1))
+```
+
+```{r}
+# After you've collected block_maxima...
+
+layout(matrix(c(1, 2), nrow = 2), heights = c(1, 2.5))
+
+# ── Top panel: jittered strip ──────────────────────────────────
+par(mar = c(0, 4, 3, 1))
+plot(block_maxima,
+     jitter(rep(0, length(block_maxima)), amount = 0.3),
+     pch   = 16,
+     cex   = 0.5,
+     col   = adjustcolor("gold3", alpha.f = 0.5),
+     xaxt  = "n",
+     yaxt  = "n",
+     xlab  = "",
+     ylab  = "",
+     main  = "Distribution of Block Maxima",
+     frame = FALSE)
+
+# ── Bottom panel: histogram with GEV curve ─────────────────────
+par(mar = c(4, 4, 0, 1))
+hist(block_maxima,
+     breaks  = 30,
+     prob    = TRUE,
+     main    = "",
+     xlab    = "Maximum value",
+     col     = adjustcolor("gold3", alpha.f = 0.55),
+     border  = "white")
+
+if (requireNamespace("evd", quietly = TRUE)) {
+  fit   <- evd::fgev(block_maxima)
+  loc   <- fit$estimate["loc"]
+  scale <- fit$estimate["scale"]
+  shape <- fit$estimate["shape"]
+  curve(evd::dgev(x, loc = loc, scale = scale, shape = shape),
+        col = "black", lwd = 2, add = TRUE)
+  legend("topright",
+         legend = paste0("GEV fit  |  ξ = ", round(shape, 2)),
+         col    = "black",
+         lwd    = 2,
+         bty    = "n")
+}
+
+layout(1)
 ```
 
 
