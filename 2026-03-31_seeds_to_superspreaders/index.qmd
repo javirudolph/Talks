@@ -284,6 +284,17 @@ Ecology has known it needed this tool since 1993. It's taken us this long to sta
 
 ---
 
+## EVT {background-color="#ffffff"}
+
+<iframe 
+  src="https://javirudolph.shinyapps.io/EVT_101/" 
+  width="100%" 
+  height="700px" 
+  frameborder="0"
+  allowfullscreen>
+</iframe>
+---
+
 ::: {.r-stretch}
 ![](images/focus_on_tail.png)
 :::
@@ -545,6 +556,18 @@ here is a natural extension of an existing framework, and when you make this one
 
 ---
 
+## Simulation {background-color="#ffffff"}
+
+<iframe 
+  src="https://youruser.shinyapps.io/yourapp/" 
+  width="100%" 
+  height="700px" 
+  frameborder="0"
+  allowfullscreen>
+</iframe>
+
+---
+
 
 ## Where the Framework Goes: American Mink in Chile {background-color="#ffffff"}
 
@@ -584,42 +607,6 @@ Crego et.al. (2018). PLoS One
 American mink in Chilean waterways — invasive, semiaquatic, dispersing along river networks. This is a tractable one-dimensional dispersal problem. They carry pathogens and are positioned to act as bridge hosts. The question is whether the tail of their movement kernel predicts pathogen spread potential before outbreak data exist.
 :::
 
-## Preliminary Simulations {background-color="#ffffff"}
-
-:::: {.columns}
-
-::: {.column width="45%"}
-**Populations with fat vs. thin-tailed movement kernels**  
-Same mean movement · Same R₀
-
-::: {.findings-block}
-**Fat-tailed populations:**  
-→ Greater variance in outbreak size  
-→ Larger maximum outbreaks  
-→ Faster spatial spread velocity
-
-**Threshold behavior:**  
-→ ξ crossing zero = qualitative shift, not just quantitative
-
-**Key:**  
-→ Detectable at realistic telemetry sample sizes
-:::
-
-*Work in progress — simulations ongoing*
-:::
-
-::: {.column width="55%"}
-::: {.placeholder-box-tall}
-[PLACEHOLDER: Simulation figure — outbreak size distributions under homogeneous / gamma / Lomax dispersion; spatial spread comparison]
-:::
-:::
-
-::::
-
-::: {.notes}
-Preliminary simulations: populations with identical mean movement distances and identical R0, but different tail shapes. Fat-tailed populations show dramatically higher variance in outbreak size, larger maximum outbreaks, faster spread — even though average behavior is identical. Crossing from thin to fat tail produces a qualitative change. And this signal is detectable at realistic sample sizes for wildlife tracking studies.
-:::
-
 ---
 
 ## {#thank-you background-color="#ffffff"}
@@ -627,7 +614,7 @@ Preliminary simulations: populations with identical mean movement distances and 
 ::: {.thank-you-slide}
 
 ::: {.thank-you-top}
-**Thank you**
+**Thank yous**
 :::
 
 ::: {.thank-you-questions}
