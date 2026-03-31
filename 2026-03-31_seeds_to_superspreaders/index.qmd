@@ -614,24 +614,35 @@ American mink in Chilean waterways — invasive, semiaquatic, dispersing along r
 ::: {.thank-you-slide}
 
 ::: {.thank-you-top}
-**Thank yous**
+**Thank you**
 :::
 
 ::: {.thank-you-questions}
-Questions?
+**Questions?** 
+
+*Francisca Javiera Rudolph, PhD*
+javiera.av@ufl.edu
 :::
 
 ::: {.thank-you-divider}
 :::
 
-::: {.thank-you-contact}
-**Francisca Javiera Rudolph, PhD**
 
-*javiera.av@ufl.edu*
+::: {.columns}
+
+::: {.column width=50%}
+::: {.thank-you-contact}
+- Global Fellows UFIC
+- F. Hernandez Univ Austral Chile
+- JM Ponciano
 :::
 
+:::
+
+::: {.column width=50%}
 ::: {.thank-you-logo}
 ![](images/SmathersLibraries-RASTER-RGB.png){width="260px"}
+:::
 :::
 
 :::
