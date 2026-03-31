@@ -10,7 +10,6 @@
   <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Francisca Javiera Rudolph, PhD">
-  <meta name="dcterms.date" content="2026-03-31">
   <title>From Seed Dispersal to Superspreaders</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -30,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-623d7be69371d3e1346103a314fd7684.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-aa93dae54dcd9a70d0d3ff4171586c2b.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -138,12 +137,14 @@
 Francisca Javiera Rudolph, PhD 
 </div>
         <p class="quarto-title-affiliation">
-            University of Florida Libraries | One Health Center of Excellence
+            University of Florida George A. Smathers Libraries
+          </p>
+        <p class="quarto-title-affiliation">
+            One Health Center of Excellence
           </p>
     </div>
 </div>
 
-  <p class="date">2026-03-31</p>
 </section>
 <section id="averages-hide-the-story" class="slide level2" data-background-color="#ffffff">
 <h2>Averages Hide the Story</h2>
@@ -305,33 +306,41 @@ Francisca Javiera Rudolph, PhD
 <section class="slide level2">
 
 </section>
-<section id="my-results-evt-applied-to-aracari-movement" class="slide level2" data-background-color="#ffffff">
-<h2>My Results: EVT Applied to Aracari Movement</h2>
+<section id="from-pattern-to-process" class="slide level2" data-background-color="#ffffff">
+<h2>From Pattern to Process</h2>
+<div class="center-content">
+<h3 id="individual-variation-in-movement-shapes-the-tail-of-the-dispersal-kernel">Individual variation in movement shapes the tail of the dispersal kernel —</h3>
+<h3 id="and-we-can-use-ξ-shape-to-see-this">and we can use ξ (shape) to see this</h3>
+</div>
 <div class="columns">
-<div class="column" style="width:55%;">
-<ul>
-<li>Fit Generalized Pareto to the tail of simulated seed shadows</li>
-<li><strong>ξ &gt; 0</strong> — fat tail — confirmed under individual variation model</li>
-<li>Conditional probability of a seed reaching beyond 500 m, 1 km — <strong>meaningfully higher under individual variation than pooled model</strong></li>
-<li>EVT gave me a number where standard kernel fitting gave me noise</li>
-</ul>
-<div class="stat-callout">
-<p><strong>The individual variation model doesn’t just fit better —<br>
-it changes the biological conclusion about<br>
-how connected forests actually are.</strong></p>
+<div class="fragment fade-in column" style="width:33%;">
+<div class="key-insight">
+<p><strong>The process</strong><br>
+Individual frugivores differ in how far they move. Some are homebodies. Some are explorers. That variation is not just noise, it is the mechanism.</p>
 </div>
-<div class="citation">
-<p>Rudolph 2022 · Holbrook &amp; Loiselle 2009</p>
+</div><div class="fragment fade-in column" style="width:33%;">
+<div class="key-insight">
+<p><strong>The pattern</strong><br>
+Pooled models underestimate long-distance dispersal. When individual variation is modeled explicitly, the tail of the seed shadow is fatter — and ξ &gt; 0 confirms it.</p>
 </div>
-</div><div class="column" style="width:45%;">
-<div class="placeholder-box">
-<p>[PLACEHOLDER: GPD fit to aracari seed shadow tail — with confidence intervals]</p>
-</div>
-<div class="placeholder-box">
-<p>[PLACEHOLDER: Conditional probability plot — pooled vs individual variation]</p>
+</div><div class="fragment fade-in column" style="width:33%;">
+<div class="key-insight">
+<p><strong>The link</strong><br>
+ξ is not a fitting artifact. It is a fingerprint of the movement process. The shape of the seed dispersal tail traces back to how individuals move and how we capture variation across individuals.</p>
 </div>
 </div></div>
+<div class="fragment fade-in stat-callout">
+<p>EVT has offered ecologists a framework for ‘rare’ events like long-distance dispersal since the 1990s — the tools were there before the field was ready to use them.</p>
+</div>
+<div class="fragment fade-in citation">
+<p>Gaines&amp; Denny (1993). <em>The largest, smallest, highest, lowest, longest, and shortest: extremes in ecology.</em> Ecology.<br>
+Katz et.al. (2005). <em>Statistics of extremes: modeling ecological disturbances.</em> Ecology<br>
+Beisel et.al (2007). <em>Testing the extreme value domain of attraction for distributions of beneficial fitness effects.</em> Genetics</p>
+</div>
 <aside class="notes">
+<p>This is the pivot. Everything before — EVT, individual variation, the aracari system — was building to this point.</p>
+<p>The argument is simple: ξ is not arbitrary. It reflects something real about how individuals move. When you allow individuals to differ, the resulting seed shadow has a fat tail, and the shape parameter you recover from fitting EVT to that tail traces back to the biological mechanism.</p>
+<p>This is what justifies the next move — taking that same logic into disease systems. If ξ encodes movement process in seed dispersal, it encodes transmission process in pathogen dispersal. Same mathematics, new biological context.</p>
 <p>When I allow individual variation in frugivore movement, I get more long-distance dispersal events in my simulated seed shadows. I fit a Generalized Pareto to the tail of those simulated kernels. The shape parameter ξ &gt; 0 — fat tail — and the conditional probability of a seed reaching beyond 500m, 1km, is meaningfully higher under individual variation than under the pooled model.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -345,8 +354,8 @@ how connected forests actually are.</strong></p>
           display:block!important;
       }</style></aside>
 </section>
-<section id="the-gap-in-disease-ecology" class="slide level2 white-text" data-background-color="#0E2841">
-<h2>The Gap in Disease Ecology</h2>
+<section id="what-about-disease-ecology" class="slide level2 white-text" data-background-color="#0E2841">
+<h2>What About Disease Ecology?</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3 id="what-lloyd-smith-et-al.-2005-showed">What Lloyd-Smith et al.&nbsp;2005 showed</h3>

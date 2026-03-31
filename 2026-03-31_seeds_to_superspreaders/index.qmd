@@ -2,8 +2,9 @@
 title: "From Seed Dispersal to Superspreaders"
 subtitle: "Extreme Value Theory as a Mechanistic Framework for Pathogen Dispersal in Wildlife Systems"
 author: "Francisca Javiera Rudolph, PhD"
-institute: "University of Florida Libraries | One Health Center of Excellence"
-date: "March 31, 2026"
+institute: 
+  - "University of Florida George A. Smathers Libraries"
+  - "One Health Center of Excellence"
 format:
   revealjs:
     theme: [default, custom_v4.scss]
@@ -322,39 +323,58 @@ Standard kernel fitting is still trying to describe the whole distribution. EVT 
 
 ---
 
-## My Results: EVT Applied to Aracari Movement {background-color="#ffffff"}
+## From Pattern to Process {background-color="#ffffff"}
+
+::: {.center-content}
+
+### Individual variation in movement shapes the tail of the dispersal kernel —  
+### and we can use ξ (shape) to see this
+
+:::
 
 :::: {.columns}
 
-::: {.column width="55%"}
-- Fit Generalized Pareto to the tail of simulated seed shadows
-- **ξ > 0** — fat tail — confirmed under individual variation model
-- Conditional probability of a seed reaching beyond 500 m, 1 km — **meaningfully higher under individual variation than pooled model**
-- EVT gave me a number where standard kernel fitting gave me noise
-
-::: {.stat-callout}
-**The individual variation model doesn't just fit better —  
-it changes the biological conclusion about  
-how connected forests actually are.**
-:::
-
-::: {.citation}
-Rudolph 2022 · Holbrook & Loiselle 2009
+::: {.fragment .fade-in .column width="33%"}
+::: {.key-insight}
+**The process**  
+Individual frugivores differ in how far they move. Some are homebodies. Some are explorers. That variation is not just noise, it is the mechanism.
 :::
 :::
 
-::: {.column width="45%"}
-::: {.placeholder-box}
-[PLACEHOLDER: GPD fit to aracari seed shadow tail — with confidence intervals]
+::: {.fragment .fade-in .column width="33%"}
+::: {.key-insight}
+**The pattern**  
+Pooled models underestimate long-distance dispersal. When individual variation is modeled explicitly, the tail of the seed shadow is fatter — and ξ > 0 confirms it.
 :::
-::: {.placeholder-box}
-[PLACEHOLDER: Conditional probability plot — pooled vs individual variation]
+:::
+
+::: {.fragment .fade-in .column width="33%"}
+::: {.key-insight}
+**The link**  
+ξ is not a fitting artifact. It is a fingerprint of the movement process. The shape of the seed dispersal tail traces back to how individuals move and how we capture variation across individuals.
 :::
 :::
 
 ::::
 
+::: {.fragment .fade-in .stat-callout}
+EVT has offered ecologists a framework for 'rare' events like long-distance dispersal since the 1990s —  the tools were there before the field was ready to use them.
+:::
+
+::: {.fragment .fade-in .citation}
+Gaines& Denny (1993). *The largest, smallest, highest, lowest, longest, and shortest: extremes in ecology.* Ecology.  
+Katz et.al. (2005). *Statistics of extremes: modeling ecological disturbances.* Ecology  
+Beisel et.al (2007). *Testing the extreme value domain of attraction for distributions of beneficial fitness effects.* Genetics
+:::
+
+
 ::: {.notes}
+This is the pivot. Everything before — EVT, individual variation, the aracari system — was building to this point.
+
+The argument is simple: ξ is not arbitrary. It reflects something real about how individuals move. When you allow individuals to differ, the resulting seed shadow has a fat tail, and the shape parameter you recover from fitting EVT to that tail traces back to the biological mechanism.
+
+This is what justifies the next move — taking that same logic into disease systems. If ξ encodes movement process in seed dispersal, it encodes transmission process in pathogen dispersal. Same mathematics, new biological context.
+
 When I allow individual variation in frugivore movement, I get more long-distance dispersal events in my simulated seed shadows.
 I fit a Generalized Pareto to the tail of those simulated kernels.
 The shape parameter ξ > 0 — fat tail — and the conditional probability of a seed reaching beyond 500m, 1km, is meaningfully higher under individual variation than under the pooled model.
@@ -362,7 +382,7 @@ The shape parameter ξ > 0 — fat tail — and the conditional probability of a
 
 ---
 
-## The Gap in Disease Ecology {background-color="#0E2841" .white-text}
+## What About Disease Ecology? {background-color="#0E2841" .white-text}
 
 :::: {.columns}
 
