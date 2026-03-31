@@ -390,7 +390,7 @@ The shape parameter ξ > 0 — fat tail — and the conditional probability of a
 
 ::: {.citation-light}
 "Population-level analyses often use average quantities to describe heterogeneous systems..."  
-— Lloyd-Smith et al. *Nature* 2005
+— Lloyd-Smith et al. Nature 2005
 :::
 
 ### Sound familiar?
@@ -408,8 +408,9 @@ Individual reproductive number, $\nu$, as a random variable representing the exp
 :::
 
 ::: {.column width="50%"}
+::: {.fragment .fade-in}
 ![](images/lloyd-smith-fig1.png)
-
+:::
 :::
   
 ::::
@@ -419,7 +420,7 @@ Individual reproductive number, $\nu$, as a random variable representing the exp
 
 - Same $R_0$, six different epidemiological worlds.
 - More heterogeneity means more outbreaks die out, but the ones that don't are explosive.
-- **k describes the shape of that individual variation, but where does k come from?**
+- **k describes the shape of that individual variation**
 :::
 
 
@@ -427,92 +428,41 @@ Individual reproductive number, $\nu$, as a random variable representing the exp
 ::: {.notes}
 The opening quote of Lloyd-Smith is the same argument I've been making about seed dispersal for the last five slides. Population averages hide the mechanism. R₀ hides individual variation in infectiousness exactly the way a pooled dispersal kernel hides individual variation in movement.
 
-Lloyd-Smith's solution was statistical — fit a negative binomial, estimate k. That works when you have contact tracing data, which you have for SARS, measles, smallpox. You do not have that for wildlife pathogens. You have GPS collars.
+Lloyd-Smith's solution was statistical — fit a distribution, estimate R0 and k. That works when you have contact tracing data, which you have for SARS, measles, smallpox. You do not have that for wildlife pathogens. You have GPS collars.
 
-Figure 2 is the machinery I'm replacing. They draw ν from a Gamma distribution — mathematically convenient, empirically reasonable. But it's an assumption. My framework derives the distribution of ν from movement data using EVT. When movement kernels have ξ > 0 — which they do, consistently, across taxa — the individual reproductive numbers follow a Lomax distribution. The Lomax is heavier-tailed than the Gamma. That changes the extinction probability surface and the outbreak size distribution in ways that matter for wildlife disease management.
+The branching process is the entire model — there is no SIR, no compartments, no population dynamics. It is a purely probabilistic model of individual-level transmission heterogeneity.
 
-Lloyd-Smith described the pattern. EVT explains the process.
 :::
-
-
-## What About Disease Ecology? {background-color="#0E2841" .white-text}
-
-:::: {.columns}
-
-::: {.column width="50%"}
-### What Lloyd-Smith et al. 2005 showed
-✓ Individual ν (reproductive number) is highly overdispersed  
-✓ Negative binomial offspring distribution captures heterogeneity  
-✓ Small dispersion parameter *k* → superspreading dominates
-
-### What they left unanswered
-✗ **WHY** is ν overdispersed in wildlife systems?  
-✗ Can we **predict** it BEFORE an outbreak?
-
-::: {.citation-light}
-Lloyd-Smith et al. *Nature* 2005
-:::
-:::
-
-::: {.column width="50%"}
-### The Answer
-
-::: {.cascade-block}
-**Heavy-tailed movement**  
-↓  
-heavy-tailed contact distribution  
-↓  
-heavy-tailed offspring distribution  
-↓  
-**superspreading**
-:::
-
-::: {.arrow-callout}
-ξ from telemetry data  
-↓  
-**Predicts *k* before any outbreak data exist**
-:::
-
-Movement data as **early-warning**  
-for disease outbreak potential
-:::
-
-::::
-
-::: {.notes}
-Lloyd-Smith 2005 is the landmark paper. They showed individual variation in infectiousness is real and consequential. But they treated it statistically — not mechanistically. For wildlife, the mechanism is movement. Heavy-tailed movement generates heavy-tailed contact distributions, which generate heavy-tailed offspring distributions. Xi from GPS data predicts k before a pathogen is even detected.
-::: 
 
 ---
+
+
 
 ## One Framework, Three Scales {background-color="#ffffff"}
 
 :::: {.columns}
 
-::: {.column width="40%"}
+::: {.column width="40%" .incremental}
 Three kernels — each shaped by the tail of the one before:
 
 **Individual Movement Kernel**  
-Estimated from GPS telemetry — *this is what you can measure today*
-
-↓
+Estimated from GPS tracking
 
 **Pathogen Dispersal Kernel**  
-Movement × contact probability = where transmission occurs
-
-↓
+Movement × contact probability = transmission
+*Camera traps*
 
 **Outbreak Spread Kernel**  
-Population-level dynamics — whether an epidemic stays local or jumps
+Population-level dynamics - case numbers
 
 ::: {.key-insight}
-The EVT shape parameter **ξ** from tracking data propagates predictive power through the entire cascade
+The EVT shape parameter **$\xi$** from tracking data propagates predictive power through the entire cascade
 :::
 :::
 
 ::: {.column width="60%"}
 ::: {.placeholder-box-tall}
-[PLACEHOLDER: Three-scale cascade diagram — individual kernel → pathogen kernel → outbreak kernel, with ξ propagating through]
+[PLACEHOLDER: Three-scale cascade diagram — individual kernel *to* pathogen kernel *to* outbreak kernel, with $\xi$ propagating through]
 :::
 :::
 
@@ -524,7 +474,46 @@ The formal architecture. You start with what you can measure: individual movemen
 
 ---
 
-## Preliminary Results: Simulations {background-color="#ffffff"}
+
+## Where the Framework Goes: American Mink in Chile {background-color="#ffffff"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Invasive semiaquatic carnivore in Chilean Patagonia
+
+- Disperses along river networks
+- Documented hosts: canine distemper, parvovirus, *Mycobacterium bovis*
+- Potential bridge host to native species: coypu, pudú, otters
+
+::: {.citation}
+Santibañez et.al. (2025). Frontiers in Veterinary Science  
+Hernandez et.al. (2024) Acta Tropica
+:::
+
+::: {.question-block}
+*How can we use mink movement along river corridors predict pathogen spread potential and spillover risk to native species?*
+
+Lack of data and time asks for a simulation framework
+:::
+:::
+
+::: {.column width="50%"}
+![](images/mink.png)  
+
+
+::: {.citation}
+Crego et.al. (2018). PLoS One
+:::
+:::
+
+::::
+
+::: {.notes}
+American mink in Chilean waterways — invasive, semiaquatic, dispersing along river networks. This is a tractable one-dimensional dispersal problem. They carry pathogens and are positioned to act as bridge hosts. The question is whether the tail of their movement kernel predicts pathogen spread potential before outbreak data exist.
+:::
+
+## Preliminary Simulations {background-color="#ffffff"}
 
 :::: {.columns}
 
@@ -562,37 +551,30 @@ Preliminary simulations: populations with identical mean movement distances and 
 
 ---
 
-## Where the Framework Goes: American Mink in Chile {background-color="#ffffff"}
+## {#thank-you background-color="#ffffff"}
 
-:::: {.columns}
+::: {.thank-you-slide}
 
-::: {.column width="50%"}
-**American Mink (*Neovison vison*)**  
-Invasive semiaquatic carnivore in Chilean Patagonia
-
-- Disperses along river networks — a tractable 1-D dispersal problem
-- Documented hosts: canine distemper, parvovirus, Aleutian disease
-- Potential bridge host to native species: coypu, pudú, South Andean deer
-- Watershed-following movement generates heavy tails — **the biological justification for the Lomax**
-
-::: {.question-block}
-*Does the tail of mink movement along river corridors predict pathogen spread potential and spillover risk to native species?*
-
-GPS tracking + pathogen surveillance + EVT → testable predictions before any outbreak
-:::
+::: {.thank-you-top}
+**Thank you**
 :::
 
-::: {.column width="50%"}
-::: {.placeholder-box}
-[PLACEHOLDER: Map — mink invasion range in Chilean Patagonia river networks]
-:::
-::: {.placeholder-box}
-[PLACEHOLDER: Photo — American mink]
-:::
+::: {.thank-you-questions}
+Questions?
 :::
 
-::::
-
-::: {.notes}
-American mink in Chilean waterways — invasive, semiaquatic, dispersing along river networks. This is a tractable one-dimensional dispersal problem. They carry pathogens and are positioned to act as bridge hosts. The question is whether the tail of their movement kernel predicts pathogen spread potential before outbreak data exist.
+::: {.thank-you-divider}
 :::
+
+::: {.thank-you-contact}
+**Francisca Javiera Rudolph, PhD**
+
+*javiera.av@ufl.edu*
+:::
+
+::: {.thank-you-logo}
+![](images/SmathersLibraries-RASTER-RGB.png){width="260px"}
+:::
+
+:::
+

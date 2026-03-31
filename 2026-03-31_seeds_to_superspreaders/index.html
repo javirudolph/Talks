@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-aa93dae54dcd9a70d0d3ff4171586c2b.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-485e32b0d7f8756ab3a710e2fe844eae.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -360,7 +360,7 @@ Beisel et.al (2007). <em>Testing the extreme value domain of attraction for dist
 <div class="column" style="width:50%;">
 <div class="citation-light">
 <p>“Population-level analyses often use average quantities to describe heterogeneous systems…”<br>
-— Lloyd-Smith et al.&nbsp;<em>Nature</em> 2005</p>
+— Lloyd-Smith et al.&nbsp;Nature 2005</p>
 </div>
 <h3 id="sound-familiar">Sound familiar?</h3>
 <p><span class="math inline">\(R_0\)</span> is an average. It hides the same individual variation we saw in dispersal kernels:</p>
@@ -372,68 +372,22 @@ Beisel et.al (2007). <em>Testing the extreme value domain of attraction for dist
 <p>Individual reproductive number, <span class="math inline">\(\nu\)</span>, as a random variable representing the expected number of secondary cases caused by a particular infected individual.</p>
 </div>
 </div><div class="column" style="width:50%;">
+<div class="fragment fade-in">
 <p><img data-src="images/lloyd-smith-fig1.png"></p>
+</div>
 </div></div>
 <div class="fragment fade-in">
 <p><img data-src="images/lloyd-smith-fig2.png"></p>
 <ul>
 <li>Same <span class="math inline">\(R_0\)</span>, six different epidemiological worlds.</li>
 <li>More heterogeneity means more outbreaks die out, but the ones that don’t are explosive.</li>
-<li><strong>k describes the shape of that individual variation, but where does k come from?</strong></li>
+<li><strong>k describes the shape of that individual variation</strong></li>
 </ul>
 </div>
 <aside class="notes">
 <p>The opening quote of Lloyd-Smith is the same argument I’ve been making about seed dispersal for the last five slides. Population averages hide the mechanism. R₀ hides individual variation in infectiousness exactly the way a pooled dispersal kernel hides individual variation in movement.</p>
-<p>Lloyd-Smith’s solution was statistical — fit a negative binomial, estimate k. That works when you have contact tracing data, which you have for SARS, measles, smallpox. You do not have that for wildlife pathogens. You have GPS collars.</p>
-<p>Figure 2 is the machinery I’m replacing. They draw ν from a Gamma distribution — mathematically convenient, empirically reasonable. But it’s an assumption. My framework derives the distribution of ν from movement data using EVT. When movement kernels have ξ &gt; 0 — which they do, consistently, across taxa — the individual reproductive numbers follow a Lomax distribution. The Lomax is heavier-tailed than the Gamma. That changes the extinction probability surface and the outbreak size distribution in ways that matter for wildlife disease management.</p>
-<p>Lloyd-Smith described the pattern. EVT explains the process.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="what-about-disease-ecology" class="slide level2 white-text" data-background-color="#0E2841">
-<h2>What About Disease Ecology?</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="what-lloyd-smith-et-al.-2005-showed">What Lloyd-Smith et al.&nbsp;2005 showed</h3>
-<p>✓ Individual ν (reproductive number) is highly overdispersed<br>
-✓ Negative binomial offspring distribution captures heterogeneity<br>
-✓ Small dispersion parameter <em>k</em> → superspreading dominates</p>
-<h3 id="what-they-left-unanswered">What they left unanswered</h3>
-<p>✗ <strong>WHY</strong> is ν overdispersed in wildlife systems?<br>
-✗ Can we <strong>predict</strong> it BEFORE an outbreak?</p>
-<div class="citation-light">
-<p>Lloyd-Smith et al.&nbsp;<em>Nature</em> 2005</p>
-</div>
-</div><div class="column" style="width:50%;">
-<h3 id="the-answer">The Answer</h3>
-<div class="cascade-block">
-<p><strong>Heavy-tailed movement</strong><br>
-↓<br>
-heavy-tailed contact distribution<br>
-↓<br>
-heavy-tailed offspring distribution<br>
-↓<br>
-<strong>superspreading</strong></p>
-</div>
-<div class="arrow-callout">
-<p>ξ from telemetry data<br>
-↓<br>
-<strong>Predicts <em>k</em> before any outbreak data exist</strong></p>
-</div>
-<p>Movement data as <strong>early-warning</strong><br>
-for disease outbreak potential</p>
-</div></div>
-<aside class="notes">
-<p>Lloyd-Smith 2005 is the landmark paper. They showed individual variation in infectiousness is real and consequential. But they treated it statistically — not mechanistically. For wildlife, the mechanism is movement. Heavy-tailed movement generates heavy-tailed contact distributions, which generate heavy-tailed offspring distributions. Xi from GPS data predicts k before a pathogen is even detected.</p>
+<p>Lloyd-Smith’s solution was statistical — fit a distribution, estimate R0 and k. That works when you have contact tracing data, which you have for SARS, measles, smallpox. You do not have that for wildlife pathogens. You have GPS collars.</p>
+<p>The branching process is the entire model — there is no SIR, no compartments, no population dynamics. It is a purely probabilistic model of individual-level transmission heterogeneity.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -452,19 +406,17 @@ for disease outbreak potential</p>
 <div class="column" style="width:40%;">
 <p>Three kernels — each shaped by the tail of the one before:</p>
 <p><strong>Individual Movement Kernel</strong><br>
-Estimated from GPS telemetry — <em>this is what you can measure today</em></p>
-<p>↓</p>
+Estimated from GPS tracking</p>
 <p><strong>Pathogen Dispersal Kernel</strong><br>
-Movement × contact probability = where transmission occurs</p>
-<p>↓</p>
+Movement × contact probability = transmission <em>Camera traps</em></p>
 <p><strong>Outbreak Spread Kernel</strong><br>
-Population-level dynamics — whether an epidemic stays local or jumps</p>
+Population-level dynamics - case numbers</p>
 <div class="key-insight">
-<p>The EVT shape parameter <strong>ξ</strong> from tracking data propagates predictive power through the entire cascade</p>
+<p>The EVT shape parameter <strong><span class="math inline">\(\xi\)</span></strong> from tracking data propagates predictive power through the entire cascade</p>
 </div>
 </div><div class="column" style="width:60%;">
 <div class="placeholder-box-tall">
-<p>[PLACEHOLDER: Three-scale cascade diagram — individual kernel → pathogen kernel → outbreak kernel, with ξ propagating through]</p>
+<p>[PLACEHOLDER: Three-scale cascade diagram — individual kernel <em>to</em> pathogen kernel <em>to</em> outbreak kernel, with <span class="math inline">\(\xi\)</span> propagating through]</p>
 </div>
 </div></div>
 <aside class="notes">
@@ -481,8 +433,46 @@ Population-level dynamics — whether an epidemic stays local or jumps</p>
           display:block!important;
       }</style></aside>
 </section>
-<section id="preliminary-results-simulations" class="slide level2" data-background-color="#ffffff">
-<h2>Preliminary Results: Simulations</h2>
+<section id="where-the-framework-goes-american-mink-in-chile" class="slide level2" data-background-color="#ffffff">
+<h2>Where the Framework Goes: American Mink in Chile</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Invasive semiaquatic carnivore in Chilean Patagonia</p>
+<ul>
+<li>Disperses along river networks</li>
+<li>Documented hosts: canine distemper, parvovirus, <em>Mycobacterium bovis</em></li>
+<li>Potential bridge host to native species: coypu, pudú, otters</li>
+</ul>
+<div class="citation">
+<p>Santibañez et.al. (2025). Frontiers in Veterinary Science<br>
+Hernandez et.al. (2024) Acta Tropica</p>
+</div>
+<div class="question-block">
+<p><em>How can we use mink movement along river corridors predict pathogen spread potential and spillover risk to native species?</em></p>
+<p>Lack of data and time asks for a simulation framework</p>
+</div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/mink.png"></p>
+<div class="citation">
+<p>Crego et.al. (2018). PLoS One</p>
+</div>
+</div></div>
+<aside class="notes">
+<p>American mink in Chilean waterways — invasive, semiaquatic, dispersing along river networks. This is a tractable one-dimensional dispersal problem. They carry pathogens and are positioned to act as bridge hosts. The question is whether the tail of their movement kernel predicts pathogen spread potential before outbreak data exist.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="preliminary-simulations" class="slide level2" data-background-color="#ffffff">
+<h2>Preliminary Simulations</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <p><strong>Populations with fat vs.&nbsp;thin-tailed movement kernels</strong><br>
@@ -517,43 +507,26 @@ Same mean movement · Same R₀</p>
           display:block!important;
       }</style></aside>
 </section>
-<section id="where-the-framework-goes-american-mink-in-chile" class="slide level2" data-background-color="#ffffff">
-<h2>Where the Framework Goes: American Mink in Chile</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>American Mink (<em>Neovison vison</em>)</strong><br>
-Invasive semiaquatic carnivore in Chilean Patagonia</p>
-<ul>
-<li>Disperses along river networks — a tractable 1-D dispersal problem</li>
-<li>Documented hosts: canine distemper, parvovirus, Aleutian disease</li>
-<li>Potential bridge host to native species: coypu, pudú, South Andean deer</li>
-<li>Watershed-following movement generates heavy tails — <strong>the biological justification for the Lomax</strong></li>
-</ul>
-<div class="question-block">
-<p><em>Does the tail of mink movement along river corridors predict pathogen spread potential and spillover risk to native species?</em></p>
-<p>GPS tracking + pathogen surveillance + EVT → testable predictions before any outbreak</p>
+<section id="thank-you" class="slide level2" data-background-color="#ffffff">
+<h2></h2>
+<div class="thank-you-slide">
+<div class="thank-you-top">
+<p><strong>Thank you</strong></p>
 </div>
-</div><div class="column" style="width:50%;">
-<div class="placeholder-box">
-<p>[PLACEHOLDER: Map — mink invasion range in Chilean Patagonia river networks]</p>
+<div class="thank-you-questions">
+<p>Questions?</p>
 </div>
-<div class="placeholder-box">
-<p>[PLACEHOLDER: Photo — American mink]</p>
+<div class="thank-you-divider">
+
 </div>
-</div></div>
-<aside class="notes">
-<p>American mink in Chilean waterways — invasive, semiaquatic, dispersing along river networks. This is a tractable one-dimensional dispersal problem. They carry pathogens and are positioned to act as bridge hosts. The question is whether the tail of their movement kernel predicts pathogen spread potential before outbreak data exist.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<div class="thank-you-contact">
+<p><strong>Francisca Javiera Rudolph, PhD</strong></p>
+<p><em>javiera.av@ufl.edu</em></p>
+</div>
+<div class="thank-you-logo">
+<p><img data-src="images/SmathersLibraries-RASTER-RGB.png" width="260"></p>
+</div>
+</div>
 
 </section>
     </div>

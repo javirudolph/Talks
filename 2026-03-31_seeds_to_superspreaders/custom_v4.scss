@@ -533,3 +533,76 @@ $white:      #FFFFFF;
   display: block !important;
 }
 
+// ============================================================
+// THANK YOU / FINAL SLIDE
+// ============================================================
+
+.thank-you-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 2em;
+}
+
+.thank-you-top {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 3.8em;
+  font-weight: 700;
+  color: $navy;
+  line-height: 1.1;
+  margin-bottom: 0.1em;
+}
+
+.thank-you-questions {
+  font-family: 'Cambria', 'Georgia', serif;
+  font-size: 2em;
+  font-style: italic;
+  color: $forest;
+  margin-bottom: 0.8em;
+}
+
+.thank-you-divider {
+  width: 180px;
+  height: 3px;
+  background: linear-gradient(90deg, $forest, $teal, $skyblue);
+  border-radius: 2px;
+  margin: 0.6em auto 1em auto;
+}
+
+.thank-you-contact {
+  font-family: 'Cambria', 'Georgia', serif;
+  font-size: 0.95em;
+  color: $navy;
+  line-height: 1.8;
+  margin-bottom: 1.4em;
+
+  strong {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: $navy;
+  }
+
+  a {
+    color: $teal;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.thank-you-logo {
+  margin-top: 0.5em;
+
+  img {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+  }
+}
+
