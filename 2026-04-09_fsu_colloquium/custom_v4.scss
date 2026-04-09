@@ -1,0 +1,608 @@
+/*
+ * custom.scss
+ * Quarto RevealJS theme for:
+ * "From Seed Dispersal to Superspreaders"
+ * Francisca Javiera Rudolph, PhD
+ *
+ * Colors extracted from rudolph_epi_behavior_symp.pptx
+ * Fonts: Aptos Display (headers), Aptos (body)
+ */
+
+/*-- scss:defaults --*/
+
+// ============================================================
+// VARIABLES
+// ============================================================
+
+$navy:       #0E2841;
+$forest:     #196B24;
+$teal:       #156082;
+$orange:     #E97132;
+$lightgrey:  #E8E8E8;
+$purple:     #A02B93;
+$skyblue:    #0F9ED5;
+$midgrey:    #555555;
+$offwhite:   #F7F7F7;
+$white:      #FFFFFF;
+
+// ============================================================
+// FONT IMPORTS — Aptos via Google Fonts fallback
+// (Aptos is a Microsoft font; fallback to Inter which is similar)
+// ============================================================
+
+// Georgia and Cambria are system fonts — no import needed
+
+/*-- scss:rules --*/
+
+// ============================================================
+// BASE REVEAL OVERRIDES
+// ============================================================
+
+.reveal {
+  font-family: 'Cambria', 'Georgia', 'Times New Roman', serif;
+  font-size: 30px;
+  color: #1a1a2e;
+  background-color: $white;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-weight: 700;
+  color: $navy;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin-bottom: 0.5em;
+}
+
+.reveal h2 {
+  font-size: 1.6em;
+  border-left: 5px solid $teal;
+  padding-left: 0.4em;
+}
+
+.reveal h3 {
+  font-size: 1.1em;
+  color: $teal;
+  font-weight: 600;
+  margin-top: 0.6em;
+  margin-bottom: 0.3em;
+}
+
+.reveal p {
+  line-height: 1.55;
+  margin-bottom: 0.5em;
+}
+
+.reveal ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.reveal ul li {
+  padding-left: 1.2em;
+  position: relative;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+.reveal ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: $teal;
+  font-weight: 600;
+}
+
+.reveal strong {
+  color: $navy;
+  font-weight: 700;
+}
+
+.reveal em {
+  color: $midgrey;
+  font-style: italic;
+}
+
+// ============================================================
+// TITLE SLIDE
+// ============================================================
+
+.reveal .title-slide {
+  background-color: $navy !important;
+  color: $white !important;
+}
+
+.title-block {
+  margin-top: 2em;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: $lightgrey;
+}
+
+.title-block strong {
+  color: $white !important;
+  font-size: 1.3em;
+  display: block;
+  margin-bottom: 0.3em;
+}
+
+.title-image {
+  margin-top: 1.5em;
+  text-align: center;
+  opacity: 0.85;
+}
+
+// ============================================================
+// WHITE TEXT MODIFIER (for dark slides)
+// ============================================================
+
+.white-text h2,
+.white-text h3,
+.white-text p,
+.white-text li,
+.white-text strong {
+  color: $white !important;
+}
+
+.white-text h2 {
+  border-left-color: $skyblue !important;
+}
+
+.white-text h3 {
+  color: $skyblue !important;
+}
+
+.white-text ul li::before {
+  color: $skyblue;
+}
+
+// ============================================================
+// PLACEHOLDER BOXES
+// ============================================================
+
+.placeholder-box {
+  background-color: $lightgrey;
+  border: 2px dashed #aaaaaa;
+  border-radius: 6px;
+  padding: 1.5em 1em;
+  text-align: center;
+  color: $midgrey;
+  font-size: 0.85em;
+  font-style: italic;
+  margin-bottom: 0.8em;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-box-tall {
+  @extend .placeholder-box;
+  min-height: 320px;
+}
+
+.placeholder-box-dark {
+  background-color: rgba(255,255,255,0.1);
+  border: 2px dashed rgba(255,255,255,0.4);
+  border-radius: 6px;
+  padding: 1.5em 1em;
+  text-align: center;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.85em;
+  font-style: italic;
+  margin-bottom: 0.8em;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// ============================================================
+// CITATION & QUOTE BLOCKS
+// ============================================================
+
+.citation {
+  font-size: 0.72em;
+  color: $midgrey;
+  font-style: italic;
+  margin-top: 1em;
+  padding-top: 0.5em;
+  border-top: 1px solid $lightgrey;
+}
+
+.citation-light {
+  font-size: 0.72em;
+  color: rgba(255,255,255,0.6);
+  font-style: italic;
+  margin-top: 1em;
+  padding-top: 0.5em;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.quote-block {
+  background-color: $offwhite;
+  border-left: 4px solid $orange;
+  padding: 0.8em 1em;
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
+  color: $navy;
+  font-size: 0.9em;
+  margin-top: 0.8em;
+}
+
+// ============================================================
+// STAT CALLOUT
+// ============================================================
+
+.stat-callout {
+  background-color: $navy;
+  color: $white;
+  border-radius: 8px;
+  padding: 0.8em 1em;
+  font-size: 0.88em;
+  line-height: 1.5;
+  margin-top: 0.8em;
+}
+
+.stat-callout strong {
+  color: $skyblue !important;
+}
+
+// ============================================================
+// KEY INSIGHT / FINDINGS BLOCKS
+// ============================================================
+
+.key-insight {
+  background-color: rgba($teal, 0.08);
+  border-left: 4px solid $teal;
+  padding: 0.8em 1em;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9em;
+  margin-top: 1em;
+  color: $navy;
+}
+
+.key-insight strong {
+  color: $teal !important;
+}
+
+.findings-block {
+  background-color: $offwhite;
+  border-radius: 8px;
+  padding: 1em 1.2em;
+  font-size: 0.88em;
+  line-height: 1.7;
+  margin: 0.8em 0;
+}
+
+.findings-block strong {
+  color: $teal !important;
+  display: block;
+  margin-top: 0.5em;
+}
+
+// ============================================================
+// CASCADE / ARROW BLOCKS (for disease mechanism slide)
+// ============================================================
+
+.cascade-block {
+  background-color: rgba($skyblue, 0.1);
+  border: 1px solid rgba($skyblue, 0.3);
+  border-radius: 8px;
+  padding: 1em 1.2em;
+  font-size: 0.92em;
+  line-height: 1.9;
+  text-align: center;
+  color: $white;
+}
+
+.cascade-block strong {
+  color: $skyblue !important;
+  font-size: 1.05em;
+}
+
+.arrow-callout {
+  background-color: rgba($orange, 0.15);
+  border: 1px solid rgba($orange, 0.5);
+  border-radius: 8px;
+  padding: 0.8em 1em;
+  font-size: 0.88em;
+  line-height: 1.7;
+  text-align: center;
+  color: $white;
+  margin-top: 0.8em;
+}
+
+.arrow-callout strong {
+  color: $orange !important;
+}
+
+// ============================================================
+// QUESTION BLOCK
+// ============================================================
+
+.question-block {
+  background-color: rgba($forest, 0.08);
+  border-left: 4px solid $forest;
+  border-radius: 0 6px 6px 0;
+  padding: 0.9em 1em;
+  font-size: 0.88em;
+  line-height: 1.6;
+  margin-top: 1em;
+  color: $navy;
+}
+
+.question-block em {
+  font-style: italic;
+  color: $forest;
+}
+
+// ============================================================
+// ξ TABLE (EVT shape parameter)
+// ============================================================
+
+.xi-table table {
+  width: 100%;
+  font-size: 0.85em;
+  border-collapse: collapse;
+  margin-top: 0.5em;
+}
+
+.xi-table td {
+  padding: 0.4em 0.6em;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  color: $white;
+}
+
+.xi-table tr:last-child td {
+  color: $orange;
+  font-weight: 700;
+}
+
+// ============================================================
+// TIMELINE BAR (for EVT slide)
+// ============================================================
+
+.timeline-bar {
+  position: absolute;
+  bottom: 0.5em;
+  left: 0;
+  right: 0;
+  background-color: rgba($teal, 0.15);
+  border-top: 2px solid $teal;
+  padding: 0.4em 1.5em;
+  font-size: 0.7em;
+  color: $lightgrey;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+// ============================================================
+// FOOTER & SLIDE NUMBER
+// ============================================================
+
+.reveal .footer {
+  font-size: 0.5em;
+  color: $midgrey;
+}
+
+.reveal .slide-number {
+  font-size: 0.5em;
+  color: $midgrey;
+  background: transparent;
+}
+
+// ============================================================
+// COLUMNS
+// ============================================================
+
+.reveal .columns {
+  display: flex;
+  gap: 1.5em;
+  align-items: flex-start;
+}
+
+// ============================================================
+// TRANSITIONS & MISC
+// ============================================================
+
+.reveal .slide-background {
+  background-color: $white;
+}
+
+.reveal section img {
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  max-width: 100%;
+}
+
+.reveal code {
+  font-family: 'Consolas', 'Monaco', monospace;
+  background-color: $lightgrey;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  font-size: 0.88em;
+}
+
+// ============================================================
+// TITLE SLIDE — white background, Georgia/Cambria fonts
+// Navy title, forest green subtitle, navy name/affiliation
+// UF Libraries logo bottom-right
+// ============================================================
+
+#title-slide {
+  background-color: $white !important;
+  color: $navy !important;
+  padding: 3em 3.5em 2em 3.5em !important;
+  text-align: left !important;
+
+  // Left accent bar — forest green vertical stripe
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 8px;
+    background: linear-gradient(180deg, $forest, $teal);
+  }
+
+  // Bottom accent line
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, $forest, $teal, $skyblue);
+  }
+
+  .title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 2.2em !important;
+    font-weight: 700;
+    color: $navy !important;
+    line-height: 1.1;
+    margin-bottom: 0.25em;
+    margin-top: 0.2em;
+    letter-spacing: -0.01em;
+  }
+
+  .subtitle {
+    font-family: 'Cambria', 'Georgia', serif;
+    font-size: 2.0em !important;
+    font-style: italic;
+    font-weight: 400;
+    color: $forest !important;
+    margin-bottom: 1.6em;
+    line-height: 1.5;
+  }
+
+  .author {
+    font-family: 'Cambria', 'Georgia', serif;
+    font-size: 1.8em !important;
+    font-weight: 700;
+    color: $navy !important;
+    margin-top: 0;
+    padding-top: 0.8em;
+    border-top: 1.5px solid $lightgrey;
+  }
+
+  .institute {
+    font-family: 'Cambria', 'Georgia', serif;
+    font-size: 1.5em !important;
+    font-weight: 400;
+    color: $navy !important;
+    margin-top: 0.2em;
+    opacity: 0.8;
+  }
+
+  .date {
+    font-family: 'Cambria', 'Georgia', serif;
+    font-size: 0.85em !important;
+    color: $midgrey !important;
+    margin-top: 0.15em;
+  }
+}
+
+// Logo — bottom-right, no background box needed (logo has no bg)
+// Add logo: "SmathersLibraries-RASTER-RGB.png" to YAML revealjs: section
+.reveal .slide-logo {
+  bottom: 24px !important;
+  right: 36px !important;
+  max-height: 90px !important;
+  max-width: 280px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+// Hide logo on all slides EXCEPT title slide
+// (remove this block if you want logo on every slide)
+.reveal .slide-logo {
+  display: none;
+}
+
+#title-slide .reveal .slide-logo,
+.reveal .slides section:first-child .slide-logo {
+  display: block !important;
+}
+
+// ============================================================
+// THANK YOU / FINAL SLIDE
+// ============================================================
+
+.thank-you-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 2em;
+}
+
+.thank-you-top {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 3.8em;
+  font-weight: 700;
+  color: $navy;
+  line-height: 1.1;
+  margin-bottom: 0.1em;
+}
+
+.thank-you-questions {
+  font-family: 'Cambria', 'Georgia', serif;
+  font-size: 2em;
+  font-style: italic;
+  color: $forest;
+  margin-bottom: 0.8em;
+}
+
+.thank-you-divider {
+  width: 180px;
+  height: 3px;
+  background: linear-gradient(90deg, $forest, $teal, $skyblue);
+  border-radius: 2px;
+  margin: 0.6em auto 1em auto;
+}
+
+.thank-you-contact {
+  font-family: 'Cambria', 'Georgia', serif;
+  font-size: 0.95em;
+  color: $navy;
+  line-height: 1.8;
+  margin-bottom: 1.4em;
+
+  strong {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: $navy;
+  }
+
+  a {
+    color: $teal;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.thank-you-logo {
+  margin-top: 0.5em;
+
+  img {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+  }
+}
+
