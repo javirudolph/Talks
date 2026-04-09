@@ -836,6 +836,7 @@ The research generates the materials. The materials build capacity.
 
 ## Bringing it together: Computational literacy as infrastructure {background-color="#ffffff"}
 
+::: {.fragment}
 **My role at UF Libraries:**
 
 - Research consulting for quantitative and computational approaches in ecology
@@ -843,9 +844,13 @@ The research generates the materials. The materials build capacity.
 - Educational materials that bridge statistics, computation, and biological mechanism
 - Building partnerships for computational training (UF Global Fellows, Chile and Ecuador)
 
-![](images/first_compt_lit.png)
+:::
 
+::: {.fragment}
 
+![](images/first_compt_lit.png){width=50%}
+
+:::
 
 ::: {.notes}
 My position at UF Libraries is designed to bridge active research with educational infrastructure. I maintain a research program in disease ecology and movement modeling. I also run workshops, provide consulting, and develop educational materials.
