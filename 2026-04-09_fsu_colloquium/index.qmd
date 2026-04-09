@@ -769,7 +769,6 @@ Hernandez et.al. (2024) Acta Tropica
 ::: {.question-block}
 *How can we use mink movement along river corridors predict pathogen spread potential and spillover risk to native species?*
 
-Short on time and lack of data = computational and simulation approach
 :::
 :::
 
