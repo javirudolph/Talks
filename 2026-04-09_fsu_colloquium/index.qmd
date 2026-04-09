@@ -482,7 +482,7 @@ In ecology, rare events often have outsized consequences. A single long-distance
 
 
 
-## From Pattern to Process {background-color="#ffffff"}
+## Process and Pattern {background-color="#ffffff"}
 
 ::: {.center-content}
 
