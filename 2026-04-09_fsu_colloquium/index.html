@@ -183,17 +183,15 @@ Francisca Javiera Rudolph, PhD
 — diSessa (2000)</p>
 </blockquote>
 <div class="fragment">
+<div class="question-block">
+<p><strong>The gap:</strong> Most students can execute code they don’t understand<br>
+<strong>The goal:</strong> Move fluently between biological meaning, mathematical formulation, and computational implementation</p>
+</div>
+</div>
+<div class="fragment">
 <p>Computational literacy is the ability to <strong>think with computation</strong> — to use it as a medium for scientific reasoning, like written language or mathematics.</p>
 </div>
 <div class="fragment">
-<div class="question-block">
-<p><strong>In disease ecology:</strong> You cannot fully understand an SIR model by only reading its equations.<br>
-You have to <strong>build it, run it, break it, and interpret it</strong> to understand what it means and how to ask/answer questions.</p>
-</div>
-</div>
-<div class="fragment">
-<p><strong>The gap:</strong> Most students can execute code they don’t understand<br>
-<strong>The goal:</strong> Move fluently between biological meaning, mathematical formulation, and computational implementation</p>
 <div class="citation">
 <p>diSessa (2000) <em>Changing Minds: Computers, Learning, and Literacy</em><br>
 Papert (1980) <em>Mindstorms: Children, Computers, and Powerful Ideas</em><br>
@@ -221,58 +219,32 @@ Weintrop et al.&nbsp;(2016) “Defining Computational Thinking for Mathematics a
 <iframe src="https://javirudolph.github.io/ecoSIR-modules/" width="100%" height="700px" frameborder="0" allowfullscreen="">
 </iframe>
 </section>
-<section id="my-research-individual-variation-as-a-mechanism" class="slide level2" data-background-color="#ffffff">
-<h2>My research: Individual variation as a mechanism</h2>
-<p><strong>Across systems, the same question:</strong></p>
-<p>How does variation among individuals drive population-level outcomes?</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="fragment">
-<ul>
-<li><strong>Seed dispersal:</strong> Some birds move farther → rare long-distance events shape forest structure</li>
-</ul>
+<section id="section" class="slide level2" data-background-color="#ffffff">
+<h2></h2>
+<div style="text-align: center; padding-top: 3em;">
+<div style="font-size: 2.2em; font-weight: 700; color: #0E2841; margin-bottom: 0.8em;">
+<p>What about research?</p>
 </div>
-<div class="fragment">
-<ul>
-<li><strong>Disease transmission:</strong> Some hosts infect more → superspreaders drive outbreak dynamics</li>
-</ul>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="fragment">
-<div class="key-insight">
-<p><strong>The computational literacy connection:</strong></p>
-<p>My research produces two outputs: scientific contributions and educational infrastructure. The disease models I build become interactive teaching modules, developed with students and centered on metacognition and computational thinking.</p>
+<div style="font-size: 1.3em; color: #156082; line-height: 1.6;">
+<p>Educational infrastructure is one output. Active research is the other.</p>
 </div>
 </div>
-</div></div>
-<aside class="notes">
-<p>My research centers on individual variation as a mechanistic driver. Across seed dispersal, disease transmission, and metacommunity ecology, the unifying thread is that population-level outcomes are not predictable from species-level averages alone.</p>
-<p>This is also where computational literacy becomes essential: these are systems where simulation is not just a convenience, it is the only way to understand what’s happening.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="averages-hide-the-story" class="slide level2" data-background-color="#ffffff">
-<h2>Averages Hide the Story</h2>
+<h2>Averages hide the story</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="fragment fade-in column" style="width:50%;">
+<p><img data-src="images/bolnick_2003.jpg" style="width:60.0%"></p>
 <ul>
 <li>Bolnick and colleagues looked across 93 species and found that <strong>individual specialization is widespread across taxa</strong> - different individuals are doing different things</li>
+</ul>
+<div class="citation">
+<p>Bolnick et al.&nbsp;<em>The American Naturalist</em> 2003 Bolnick et al.&nbsp;<em>TREE</em> 2011</p>
+</div>
+</div><div class="fragment fade-in column" style="width:50%;">
+<ul>
 <li>Focusing on variation among individuals, not species averages, reveals the mechanisms behind seed dispersal outcomes.</li>
 </ul>
-<p><img data-src="images/bolnick_2003.jpg" style="width:60.0%"></p>
-<div class="citation">
-<p>Bolnick et al.&nbsp;<em>The American Naturalist</em> 2003</p>
-</div>
-</div><div class="column" style="width:50%;">
 <p><img data-src="images/Zwolak_2018.jpg" style="height:50.0%"></p>
 <div class="citation">
 <p>Zwolak. <em>Biological Reviews</em> 2018</p>
@@ -331,6 +303,38 @@ Weintrop et al.&nbsp;(2016) “Defining Computational Thinking for Mathematics a
 
 
 <img data-src="images/indiv_fits_to_shados.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="images/focus_on_tail.png" class="r-stretch"></section>
+<section class="slide level2">
+
+<div class="columns">
+<div class="fragment fade-in column" style="width:45%;">
+<p><img data-src="images/extended_kernels1.png"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="fragment fade-in column" style="width:52%;">
+<p><img data-src="images/extended_kernels2.png"></p>
+</div></div>
+<aside class="notes">
+<p>García and Borda-de-Água showed that if you treat long-distance dispersal events as exactly what they are — extremes — you can estimate probabilities of dispersal distances you never observed in your study. That’s the power of EVT. And that’s exactly what I did with my aracari data.</p>
+<p>When I allow individual variation in frugivore movement, I get more long-distance dispersal events in my simulated seed shadows. I fit a Generalized Pareto to the tail of those simulated kernels. The shape parameter ξ &gt; 0 — fat tail — and the conditional probability of a seed reaching beyond 500m, 1km, is meaningfully higher under individual variation than under the pooled model.</p>
+<p>Consequences of individual variation in animal movement — in frugivores, it translates to an increase in the number of long-distance seed dispersal events.</p>
+<p>We know there is a link from mechanism to outcome. Now we need a framework.</p>
+<p>Standard kernel fitting is still trying to describe the whole distribution. EVT says: stop trying to fit the whole thing. Focus only on the tail, where it matters. Let the data above a threshold speak for themselves.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="central-limit-theorem-clt-extreme-value-theory-evt" class="slide level2">
 <h2>Central Limit Theorem (CLT) &amp; Extreme Value Theory (EVT)</h2>
 <h3 id="the-special-rules-in-statistics">The special rules in statistics</h3>
@@ -385,39 +389,30 @@ Weintrop et al.&nbsp;(2016) “Defining Computational Thinking for Mathematics a
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2">
-
-<!-- ## EVT {background-color="#ffffff"} -->
-<!-- <iframe  -->
-<!--   src="https://javirudolph.shinyapps.io/EVT_101/"  -->
-<!--   width="100%"  -->
-<!--   height="700px"  -->
-<!--   frameborder="0" -->
-<!--   allowfullscreen> -->
-<!-- </iframe> -->
-<!-- --- -->
+<section id="evt" class="slide level2" data-background-color="#ffffff">
+<h2>EVT</h2>
+<iframe src="https://javirudolph.shinyapps.io/EVT_101/" width="100%" height="700px" frameborder="0" allowfullscreen="">
+</iframe>
 </section>
 <section id="why-evt-matters-for-ecology" class="slide level2" data-background-color="#ffffff">
 <h2>Why EVT matters for ecology</h2>
 <p><strong>EVT has been used successfully in other fields:</strong></p>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Hydrology:</strong> - Predicting 100-year floods from 30 years of data - Estimating extreme rainfall events - Infrastructure design under climate change</p>
-<p><strong>Finance:</strong> - Tail risk assessment - Portfolio stress testing - Estimating probability of catastrophic losses</p>
+<div class="fragment fade-in column" style="width:50%;">
+<p><strong>Hydrology:</strong> - Predicting 100-year floods from 30 years of data - Estimating extreme rainfall events - Infrastructure design under climate change - Hurricanes</p>
+<p><strong>Finance:</strong> - Risk assessment - Portfolio stress testing - Estimating probability of catastrophic losses</p>
 <div class="citation">
-<p>Katz, Parlange &amp; Naveau (2002) <em>Advances in Water Resources</em></p>
+<p>Katz, Parlange &amp; Naveau (2002) <em>Advances in Water Resources</em> S. Coles (2001) <em>An Introduction to Statistical Modeling of Extreme Values</em></p>
 </div>
-</div><div class="column" style="width:50%;">
-<p><strong>In ecology, rare events matter disproportionately:</strong></p>
-<ul>
-<li>Long-distance seed dispersal shapes metapopulation dynamics</li>
-<li>Extreme climatic events drive population crashes</li>
-<li>Rare large fires structure landscapes</li>
-<li><strong>Superspreading events control outbreak dynamics</strong></li>
-</ul>
+</div><div class="fragment fade-in column" style="width:50%;">
+<p><strong>In ecology, rare events matter disproportionately</strong></p>
 <div class="key-insight">
-<p><strong>The payoff:</strong> EVT lets you predict the probability of events you haven’t witnessed yet from the data you have.</p>
-<p>This is exactly what we need for wildlife disease systems with sparse data.</p>
+<p><strong>The payoff:</strong> EVT lets you predict the probability of events you haven’t witnessed yet from the data you have (focusing on the tail).</p>
+</div>
+<div class="citation">
+<p>Gaines &amp; Denny (1993) <em>Ecology</em><br>
+Katz et al.&nbsp;(2005) <em>Ecology</em><br>
+Gutschick &amp; BassiriRad (2003) <em>New Phytologist</em></p>
 </div>
 </div></div>
 <aside class="notes">
@@ -434,41 +429,6 @@ Weintrop et al.&nbsp;(2016) “Defining Computational Thinking for Mathematics a
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section class="slide level2">
-
-
-<img data-src="images/focus_on_tail.png" class="r-stretch"></section>
-<section class="slide level2">
-
-<div class="columns">
-<div class="fragment fade-in column" style="width:45%;">
-<p><img data-src="images/extended_kernels1.png"></p>
-</div><div class="column" style="width:2%;">
-
-</div><div class="fragment fade-in column" style="width:52%;">
-<p><img data-src="images/extended_kernels2.png"></p>
-</div></div>
-<aside class="notes">
-<p>García and Borda-de-Água showed that if you treat long-distance dispersal events as exactly what they are — extremes — you can estimate probabilities of dispersal distances you never observed in your study. That’s the power of EVT. And that’s exactly what I did with my aracari data.</p>
-<p>When I allow individual variation in frugivore movement, I get more long-distance dispersal events in my simulated seed shadows. I fit a Generalized Pareto to the tail of those simulated kernels. The shape parameter ξ &gt; 0 — fat tail — and the conditional probability of a seed reaching beyond 500m, 1km, is meaningfully higher under individual variation than under the pooled model.</p>
-<p>Consequences of individual variation in animal movement — in frugivores, it translates to an increase in the number of long-distance seed dispersal events.</p>
-<p>We know there is a link from mechanism to outcome. Now we need a framework.</p>
-<p>Standard kernel fitting is still trying to describe the whole distribution. EVT says: stop trying to fit the whole thing. Focus only on the tail, where it matters. Let the data above a threshold speak for themselves.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-
 </section>
 <section id="from-pattern-to-process" class="slide level2" data-background-color="#ffffff">
 <h2>From Pattern to Process</h2>
@@ -493,13 +453,8 @@ Pooled models underestimate long-distance dispersal. When individual variation i
 ξ is not a fitting artifact. It is a fingerprint of the movement process. The shape of the seed dispersal tail traces back to how individuals move and how we capture variation across individuals.</p>
 </div>
 </div></div>
-<div class="fragment fade-in stat-callout">
-<p>EVT has offered ecologists a framework for ‘rare’ events like long-distance dispersal since the 1990s — the tools were there before the field was ready to use them.</p>
-</div>
 <div class="fragment fade-in citation">
-<p>Gaines&amp; Denny (1993). <em>The largest, smallest, highest, lowest, longest, and shortest: extremes in ecology.</em> Ecology.<br>
-Katz et.al. (2005). <em>Statistics of extremes: modeling ecological disturbances.</em> Ecology<br>
-Beisel et.al (2007). <em>Testing the extreme value domain of attraction for distributions of beneficial fitness effects.</em> Genetics</p>
+<p>Snell, …[Rudolph] et al.&nbsp;(2019) <em>Consequences of intraspecific variation in seed dispersal for plant demography, communities, evolution and global change</em></p>
 </div>
 <aside class="notes">
 <p>This is the pivot. Everything before — EVT, individual variation, the aracari system — was building to this point.</p>
@@ -518,27 +473,25 @@ Beisel et.al (2007). <em>Testing the extreme value domain of attraction for dist
           display:block!important;
       }</style></aside>
 </section>
-<section id="the-same-question-different-system" class="slide level2 white-text" data-background-color="#0E2841">
-<h2>The same question, different system</h2>
+<section id="similar-question-different-system" class="slide level2 white-text" data-background-color="#0E2841">
+<h2>Similar question, different system</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="fragment fade-in column" style="width:50%;">
 <p><strong>Seed dispersal:</strong></p>
 <p>Individual birds differ in how far they move<br>
-→ Some seeds travel farther than predicted from the average<br>
-→ Rare long-distance events shape forest structure<br>
-→ <strong>EVT quantifies the tail of the dispersal kernel</strong></p>
-</div><div class="column" style="width:50%;">
+- Some seeds travel farther than predicted from the average<br>
+- Rare long-distance events shape forest structure<br>
+- <strong>EVT quantifies the tail of the dispersal kernel</strong></p>
+</div><div class="fragment fade-in column" style="width:50%;">
 <p><strong>Disease transmission:</strong></p>
 <p>Individual hosts differ in how many others they infect<br>
-→ Some outbreaks are larger than predicted from R₀<br>
-→ Rare superspreading events drive epidemic dynamics<br>
-→ <strong>Can EVT quantify the tail of the transmission process?</strong></p>
+- Some outbreaks are larger than predicted from R₀<br>
+- Rare superspreading events drive epidemic dynamics<br>
+- <strong>Can EVT quantify the tail of the transmission process?</strong></p>
 </div></div>
 <div class="fragment">
 <div class="key-insight">
-<p><strong>The parallel is not metaphorical. It is mechanistic.</strong></p>
 <p>If movement heterogeneity generates fat-tailed seed shadows, does movement heterogeneity generate fat-tailed outbreak sizes?</p>
-<p>If ξ characterizes the dispersal tail, can ξ characterize the transmission tail?</p>
 </div>
 <aside class="notes">
 <p>This is the pivot slide. Everything up to here has been about seed dispersal. Now we make the move to disease.</p>
@@ -556,7 +509,7 @@ Beisel et.al (2007). <em>Testing the extreme value domain of attraction for dist
       }</style></aside>
 </div>
 </section>
-<section id="individual-variation-in-disease-transmission" class="slide level2 white-text" data-background-color="#0E2841">
+<section id="individual-variation-in-disease-transmission" class="slide level2 white-text" data-background-color="#1a4369">
 <h2>Individual Variation in Disease Transmission</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -648,7 +601,7 @@ But the exponential has a <strong>thin tail</strong> — it does not generate su
 <div class="columns">
 <div class="column" style="width:55%;">
 <p><strong>What if dispersion effort <span class="math inline">\(a\)</span> is itself heterogeneous?</strong></p>
-<p>Allow dispersion effort <span class="math inline">\(a\)</span>, to be distributed as an exponential distribution, whose parameter is sampled from a gamma distribu- tion:</p>
+<p>Allow dispersion effort <span class="math inline">\(a\)</span>, to be distributed as an exponential distribution, whose parameter is sampled from a gamma distribution:</p>
 <p>Let <span class="math inline">\(A \sim \text{Gamma}(\theta, \tau)\)</span> — individual variation in transmission potential — and <span class="math inline">\(Y \mid A \sim \text{Exp}(A)\)</span> — realized dispersion given that potential.</p>
 <p>Then the marginal distribution of <span class="math inline">\(Y\)</span> is:</p>
 <p><span class="math display">\[f_Y(y) = \int_0^\infty a e^{-ay} \cdot \frac{\theta^\tau}{\Gamma(\tau)} a^{\tau-1} e^{-\theta a} \, da = \frac{\tau \theta^\tau}{(y + \theta)^{\tau+1}}\]</span></p>
@@ -707,7 +660,7 @@ Hernandez et.al. (2024) Acta Tropica</p>
 </div>
 <div class="question-block">
 <p><em>How can we use mink movement along river corridors predict pathogen spread potential and spillover risk to native species?</em></p>
-<p>Lack of data and time asks for a simulation framework</p>
+<p>Short on time and lack of data = computational and simulation approach</p>
 </div>
 </div><div class="column" style="width:50%;">
 <p><img data-src="images/mink.png"></p>
@@ -733,26 +686,20 @@ Hernandez et.al. (2024) Acta Tropica</p>
 <h2>The proposal: Using EVT to predict unobserved extremes</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><strong>Current work:</strong></p>
-<ul>
-<li>Movement simulator for American mink in Patagonian river networks</li>
-<li>Collaboration with Felipe Hernández (Universidad Austral de Chile) and José Miguel Ponciano (UF)</li>
-<li>Using EVT/POT to parameterize dispersal tails from sparse telemetry</li>
-<li>Connecting to Ponciano-Capistrán stochastic pure birth process for disease spread</li>
-</ul>
-<p><strong>The payoff:</strong></p>
+<p><strong>Applications:</strong></p>
 <ul>
 <li>Predict pathogen spread potential <em>before</em> outbreak data exist</li>
-<li>Identify high-risk river corridors for surveillance</li>
+<li>Identify high-risk river segments for surveillance</li>
 <li>Quantify spillover risk to native species</li>
 </ul>
 </div><div class="column" style="width:50%;">
+<div class="fragment">
 <div class="key-insight">
-<p><strong>This is the power of EVT:</strong></p>
-<p>You don’t need to observe a 100 km dispersal event to estimate the probability of a 100 km dispersal event.</p>
-<p>You fit the tail from the data you have, and the theory tells you what the tail predicts about events you haven’t seen.</p>
-<p><strong>This is also the power of computational literacy:</strong></p>
+<p><strong>The power of EVT:</strong></p>
+<p>You don’t need to observe a 100 km dispersal to estimate its probability.</p>
+<p><strong>Computational Literacy:</strong></p>
 <p>The simulation framework is not just analysis. It is scenario exploration. It is a reasoning tool for asking “what if” questions before the system tells you the answer.</p>
+</div>
 </div>
 </div></div>
 <aside class="notes">
@@ -771,56 +718,17 @@ Hernandez et.al. (2024) Acta Tropica</p>
           display:block!important;
       }</style></aside>
 </section>
-<section id="another-example-internal-structure-of-metacommunities" class="slide level2" data-background-color="#ffffff">
-<h2>Another example: Internal structure of metacommunities</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>The question:</strong> When do species co-occurrence patterns reflect environmental filtering vs.&nbsp;spatial processes?</p>
-<p><strong>The computational challenge:</strong> Joint Species Distribution Models (jSDMs) are black boxes unless you understand: - What they assume about species interactions - What they estimate about environmental responses - When residual correlations mean something biological vs.&nbsp;statistical artifact</p>
-<div class="citation">
-<p>Rudolph &amp; Leibold (2020) <em>Ecology</em></p>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="key-insight">
-<p><strong>This is a computational literacy problem:</strong></p>
-<p>Students can run <code>sjSDM()</code> and get output. But can they: - Interpret what the latent factors represent? - Diagnose when the model is overfit? - Translate between residual correlation matrices and macroecological patterns?</p>
-<p>The code runs. The understanding requires moving between the ecological question, the statistical structure, and the computational implementation.</p>
-</div>
-<p><strong>We teach this:</strong> Advanced ecology course co-taught with Mathew Leibold using National Lakes Assessment data across 9 ecoregions. Students fit sjSDMs and characterize macroecological patterns to ask: when do scaling laws hold, and when do they break?</p>
-</div></div>
-<aside class="notes">
-<p>The metacommunity work with Mathew Leibold is another case study in computational literacy. Joint Species Distribution Models have become standard tools, but students learn to run them without understanding what they are estimating or when to trust the output.</p>
-<p>We co-teach an advanced graduate course where students work with National Lakes Assessment data across 9 ecoregions, fit jSDMs to understand how environmental filtering and spatial processes shape freshwater communities, and connect those process-level results to pattern-level macroecological scaling laws.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
 <section id="bringing-it-together-computational-literacy-as-infrastructure" class="slide level2" data-background-color="#ffffff">
 <h2>Bringing it together: Computational literacy as infrastructure</h2>
 <p><strong>My role at UF Libraries:</strong></p>
 <ul>
-<li>Research consulting for quantitative and computational approaches in ecology and biomedicine</li>
+<li>Research consulting for quantitative and computational approaches in ecology</li>
 <li>Workshop development and instruction (R, simulation modeling, reproducibility)</li>
 <li>Educational materials that bridge statistics, computation, and biological mechanism</li>
 <li>Building partnerships for computational training (UF Global Fellows, Chile and Ecuador)</li>
 </ul>
-<div class="fragment">
-<p><strong>The metacommunity course example:</strong></p>
-<ul>
-<li>Advanced ecology with Mathew Leibold</li>
-<li>National Lakes Assessment data (9,000+ lakes, 9 ecoregions, phytoplankton/zooplankton/benthic macroinvertebrates)</li>
-<li>Each student analyzes an ecoregion pair: macroecological patterns + sjSDMs</li>
-<li>Final symposium: when do scaling laws hold, and what do jSDMs tell us about why?</li>
-</ul>
-<aside class="notes">
+
+<img data-src="images/first_compt_lit.png" class="r-stretch"><aside class="notes">
 <p>My position at UF Libraries is designed to bridge active research with educational infrastructure. I maintain a research program in disease ecology and movement modeling. I also run workshops, provide consulting, and develop educational materials.</p>
 <p>The course with Leibold is structured as a working group where the deliverable is publishable synthesis. Students learn by doing research, not by following tutorials.</p>
 <p>That is computational literacy. Not tool fluency. Conceptual grounding in the connection between the biological question, the statistical model, and the computational implementation.</p>
@@ -835,7 +743,6 @@ Hernandez et.al. (2024) Acta Tropica</p>
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</div>
 </section>
 <section id="what-i-hope-you-take-away" class="slide level2" data-background-color="#ffffff">
 <h2>What I hope you take away</h2>
@@ -845,7 +752,7 @@ Hernandez et.al. (2024) Acta Tropica</p>
 <ul>
 <li>Individual variation drives population-level outcomes in seed dispersal and disease transmission</li>
 <li>Extreme Value Theory provides a formal framework for quantifying rare events</li>
-<li>Movement ecology is the mechanistic link between individual behavior and pathogen spread</li>
+<li>Movement ecology as the mechanistic link between individual behavior and pathogen spread</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><strong>The computational literacy message:</strong></p>
@@ -857,8 +764,7 @@ Hernandez et.al. (2024) Acta Tropica</p>
 </div></div>
 <div class="fragment">
 <div class="key-insight">
-<p><strong>My position exists because computational literacy is now foundational to ecological and biomedical research.</strong></p>
-<p>The question is not whether students will use computation. It is whether they will understand what they are doing when they do.</p>
+<p><strong>My position exists because libraries are evolving to recognize that computational skills are foundational to research.</strong></p>
 </div>
 <aside class="notes">
 <p>I want to end by tying together the research and the mission. The research on individual variation, EVT, and disease transmission is substantive and ongoing. The computational literacy work is not a side project. It is core infrastructure for how research gets done.</p>
@@ -883,10 +789,6 @@ Hernandez et.al. (2024) Acta Tropica</p>
 <div class="thank-you-top">
 <p><strong>Thank you</strong></p>
 </div>
-<div class="thank-you-questions">
-<p><strong>Questions?</strong></p>
-<p><em>Francisca Javiera Rudolph, PhD</em> javiera.av@ufl.edu</p>
-</div>
 <div class="thank-you-divider">
 
 </div>
@@ -894,15 +796,14 @@ Hernandez et.al. (2024) Acta Tropica</p>
 <div class="column" style="width:50%;">
 <div class="thank-you-contact">
 <ul>
-<li>Global Fellows UFIC</li>
+<li>Office of the Assoc. Dean of Research - UF Libraries</li>
+<li>Global Fellows UF International Center</li>
 <li>F. Hernandez Univ Austral Chile</li>
 <li>JM Ponciano</li>
 </ul>
 </div>
 </div><div class="column" style="width:50%;">
-<div class="thank-you-logo">
 <p><img data-src="images/SmathersLibraries-RASTER-RGB.png" width="260"></p>
-</div>
 </div></div>
 
 </div>
