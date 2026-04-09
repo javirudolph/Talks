@@ -606,17 +606,15 @@ But the exponential has a <strong>thin tail</strong> — it does not generate su
 <p>Then the marginal distribution of <span class="math inline">\(Y\)</span> is:</p>
 <p><span class="math display">\[f_Y(y) = \int_0^\infty a e^{-ay} \cdot \frac{\theta^\tau}{\Gamma(\tau)} a^{\tau-1} e^{-\theta a} \, da = \frac{\tau \theta^\tau}{(y + \theta)^{\tau+1}}\]</span></p>
 <div class="stat-callout">
-<p>This is the <strong>Lomax distribution</strong> — special case of a GPD - a heavy-tailed distribution with support on <span class="math inline">\([0, \infty)\)</span>.<br>
+<p>The <strong>Lomax distribution</strong> — special case of a GPD - a heavy-tailed distribution with support on <span class="math inline">\([0, \infty)\)</span>.<br>
 The tail emerges mechanistically from the compound structure.</p>
 </div>
 <p>And the probability of transmission under Lomax-distributed dispersion:</p>
 <p><span class="math display">\[P(X(a) \geq 1) = \int_0^\infty \left(1 - e^{-abE}\right) \frac{\tau \theta^\tau}{(a+\theta)^{\tau+1}} \, da\]</span></p>
 </div><div class="column" style="width:45%;">
 <div class="key-insight">
-<p><strong>The Gamma is the movement</strong></p>
-<p><span class="math inline">\(\theta\)</span> and <span class="math inline">\(\tau\)</span> are not abstract parameters — they characterize how individuals in a population move. Some animals are homebodies, some are explorers.</p>
-<p>That variation across individuals, captured by the Gamma, is what drives the heavy tail.</p>
-<p>Allow the movement to vary, and EVT drops out the other end.</p>
+<p><span class="math inline">\(\theta\)</span> and <span class="math inline">\(\tau\)</span> can characterize how individuals in a population move. Some animals are homebodies, some are explorers.</p>
+<p>That variation across individuals, captured by the Gamma, allows for a heavier tail.</p>
 </div>
 <div class="citation">
 <p>Rudolph &amp; Ponciano (2025) Biorxiv | Rudolph (in.prep)</p>

@@ -696,7 +696,7 @@ Then the marginal distribution of $Y$ is:
 $$f_Y(y) = \int_0^\infty a e^{-ay} \cdot \frac{\theta^\tau}{\Gamma(\tau)} a^{\tau-1} e^{-\theta a} \, da = \frac{\tau \theta^\tau}{(y + \theta)^{\tau+1}}$$
 
 ::: {.stat-callout}
-This is the **Lomax distribution** — special case of a GPD - a heavy-tailed distribution with support on $[0, \infty)$.  
+The **Lomax distribution** — special case of a GPD - a heavy-tailed distribution with support on $[0, \infty)$.  
 The tail emerges mechanistically from the compound structure.
 :::
 
@@ -709,14 +709,10 @@ $$P(X(a) \geq 1) = \int_0^\infty \left(1 - e^{-abE}\right) \frac{\tau \theta^\ta
 ::: {.column width="45%"}
 
 ::: {.key-insight}
-**The Gamma is the movement**  
 
+$\theta$ and $\tau$ can characterize how individuals in a population move. Some animals are homebodies, some are explorers. 
 
-$\theta$ and $\tau$ are not abstract parameters — they characterize how individuals in a population move. Some animals are homebodies, some are explorers. 
-
-That variation across individuals, captured by the Gamma, is what drives the heavy tail.
-
-Allow the movement to vary, and EVT drops out the other end.
+That variation across individuals, captured by the Gamma, allows for a heavier tail.
 
 :::
 
