@@ -1,0 +1,160 @@
+---
+title: "Your Science, Online"
+subtitle: "Why you need a website, and how to build one today"
+author: "Francisca Javiera Rudolph, PhD"
+institute: "UF George A. Smathers Libraries | Water Institute Fall 2026 Student Showcase"
+date: 2026-11-17
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    preview-links: auto
+    footer: "UF Libraries | Computational Literacy"
+    width: 1280
+    height: 720
+    margin: 0.1
+---
+
+## Who am I?
+
+::::: columns
+::: {.column width="60%"}
+
+-   PhD in Zoology from UF: disease ecology and modeling
+-   Computational Literacy Librarian
+
+::: big-statement
+[javirudolph.github.io](https://javirudolph.github.io)
+:::
+:::
+
+::: {.column width="40%"}
+![](javirudolph_headshot.jpg){width="80%" fig-alt="Headshot of Javi Rudolph"}
+:::
+:::::
+
+::: card
+I built [my website](https://javirudolph.github.io), and these slides, with RStudio, Quarto, and GitHub.
+:::
+
+::: notes
+Everything you need to know about me is here, and anyone can find it.
+Then come back to the slides.
+:::
+
+## Someone is going to Google you
+
+-   A PI deciding whether to take you on
+-   A hiring committee, an agency, a journalist
+-   A collaborator who just saw your poster
+
+::: fragment
+::: big-statement
+**What do they find right now?**
+:::
+:::
+
+::: notes
+~1.5 min. Ask: "Who has Googled themselves lately? What came up?"
+If you don't tell your story, search results tell it for you.
+:::
+
+## Your story + your proof
+
+::::: columns
+::: {.column width="50%"}
+### Your website tells
+
+-   What you study and why
+-   Who you are
+-   How to reach you
+:::
+
+::: {.column width="50%"}
+### Your GitHub shows
+
+-   Your code and projects
+-   How you work
+-   That you can build things
+:::
+:::::
+
+::: {.fragment .card}
+A website built on GitHub is already part of your portfolio.
+:::
+
+::: notes
+~1.5 min. This is the key slide. The site tells, the repos show.
+Employers and PIs increasingly look at GitHub as evidence of skills.
+:::
+
+## Work in public
+
+::: big-quote
+[*To build community, we have to do science publicly, in the open.*](https://javirudolph.github.io/posts/2025-06-19-computational-literacy/)
+:::
+
+::: {.fragment .credit}
+Inspired by David Robinson, [*The Unreasonable Effectiveness of Public Work*](https://posit.co/resources/videos/the-unreasonable-effectiveness-of-public-work/)
+:::
+
+::: notes
+~1 min. This quote is from my own blog post about preparing for this job in the open.
+The value of your work grows when people can see it.
+:::
+
+## Every GitHub account gets **one** personal website:
+
+::: url-main
+username.github.io
+:::
+
+<br>
+
+Every project you share then lives under it: 
+
+- username.github.io/thesis-maps
+- username.github.io/water-quality-dashboard
+
+::: {.fragment .card}
+**Choose a username you'd put on a CV.**
+:::
+
+::: notes
+~1.5 min. Show javirudolph.github.io, then a project under it (javirudolph.github.io/Talks).
+:::
+
+# Let's build one {.section-slide}
+
+::: card
+[github.com/ARCS-UFLibraries/academic-website-template](https://github.com/ARCS-UFLibraries/academic-website-template)
+:::
+
+::: notes
+~10 min demo.
+1. Show the example site: arcs-uflibraries.github.io/academic-website-template
+2. Go to the template repo, click "Use this template", name it username.github.io
+3. Settings > Pages > GitHub Actions
+4. Edit a FIXME line in _quarto.yml, commit
+5. Actions tab: watch the build, open the live site
+Backup: have a pre-made site ready in case Wi-Fi is slow.
+:::
+
+## Start small: photo, bio, CV
+
+
+
+::: card
+feeling stuck? Book a consult at answers.uflib.ufl.edu/askarcs  
+
+or contact me at javiera.av@ufl.edu
+:::
+
+::: big-statement
+Thank you!
+:::
+
+::: notes
+Leave this up during questions.
+Mention: need help? Book a consult at answers.uflib.ufl.edu/askarcs
+:::

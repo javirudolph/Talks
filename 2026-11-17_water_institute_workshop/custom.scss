@@ -1,0 +1,161 @@
+/*
+ * custom.scss
+ * Quarto RevealJS theme for:
+ * "Your Science, Online" | UF Water Institute Graduate Seminar
+ * Francisca Javiera Rudolph, PhD
+ */
+
+/*-- scss:defaults --*/
+
+$navy:      #0E2841;
+$teal:      #156082;
+$orange:    #E97132;
+$midgrey:   #555555;
+$offwhite:  #F7F7F7;
+$white:     #FFFFFF;
+
+$body-bg: $white;
+$body-color: #1a1a2e;
+$link-color: $teal;
+$presentation-heading-color: $navy;
+
+/*-- scss:rules --*/
+
+// ---- Base -----------------------------------------------
+.reveal {
+  font-family: 'Cambria', 'Georgia', 'Times New Roman', serif;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-weight: 700;
+  color: $navy;
+  text-transform: none;
+  line-height: 1.15;
+}
+
+.reveal h2 {
+  font-size: 1.3em;
+  border-left: 6px solid $teal;
+  padding-left: 0.4em;
+  margin-bottom: 0.7em;
+}
+
+.reveal h3 {
+  font-size: 1em;
+  color: $teal;
+  font-weight: 600;
+}
+
+.reveal p { line-height: 1.5; }
+
+.reveal strong { color: $navy; }
+
+.reveal ul li::marker { color: $teal; }
+
+.reveal code {
+  color: $teal;
+  background: $offwhite;
+  padding: 0.05em 0.3em;
+  border-radius: 4px;
+}
+
+// ---- Title slide ----------------------------------------
+.reveal .quarto-title-block .title {
+  color: $navy;
+  font-size: 2em;
+}
+
+.reveal .quarto-title-block .subtitle {
+  color: $teal;
+  font-style: italic;
+}
+
+.reveal .quarto-title-block .quarto-title-author-name,
+.reveal .quarto-title-block .quarto-title-affiliation {
+  color: $midgrey;
+}
+
+// ---- Section slides (light) -----------------------------
+// Use on a slide like: # Let's build one {.section-slide}
+.reveal .slides section.section-slide {
+  background: $offwhite;
+  border-top: 10px solid $orange;
+}
+
+.section-slide h1 {
+  color: $navy;
+  font-size: 2.2em;
+}
+
+// ---- Big statement --------------------------------------
+.big-statement {
+  font-family: 'Georgia', serif;
+  font-size: 1.4em;
+  line-height: 1.3;
+  color: $navy;
+  margin-top: 1em;
+}
+
+.accent { color: $orange; font-weight: 700; }
+
+// ---- Big quote ------------------------------------------
+.big-quote {
+  font-family: 'Georgia', serif;
+  font-size: 1.5em;
+  line-height: 1.3;
+  margin-top: 1.2em;
+  padding-left: 0.6em;
+  border-left: 6px solid $orange;
+}
+
+.big-quote a {
+  color: $navy;
+  text-decoration: none;
+}
+
+// ---- Small credit line ----------------------------------
+.credit {
+  font-size: 0.6em;
+  color: $midgrey;
+  margin-top: 2em;
+}
+
+// ---- URL boxes (username slide) -------------------------
+.url-main {
+  font-family: 'Courier New', monospace;
+  font-size: 1.3em;
+  font-weight: 700;
+  color: $white;
+  background: $navy;
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  border-radius: 8px;
+}
+
+.url-sub {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  color: $navy;
+  background: $offwhite;
+  border-left: 5px solid $orange;
+  display: inline-block;
+  padding: 0.25em 0.7em;
+  margin: 0.25em 0;
+}
+
+// ---- Callout card ---------------------------------------
+.card {
+  background: $offwhite;
+  border-left: 6px solid $orange;
+  padding: 0.5em 0.9em;
+  border-radius: 6px;
+  margin-top: 0.8em;
+  font-size: 0.75em;
+}
+
+// ---- Footer and slide number ----------------------------
+.reveal .footer { color: $midgrey; font-size: 0.45em; }
+.reveal .slide-number { color: $midgrey; background: transparent; }
